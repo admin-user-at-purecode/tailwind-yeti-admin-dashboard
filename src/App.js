@@ -2,15 +2,16 @@ import React from "react";
 
 import { Provider } from "react-redux";
 
-import "./App.css";
 
-import Router from "./routes";
 import Store from "./services/Store";
+import TopBar from "./components/TopBar";
+import MenuBar from "./components/MenuBar";
 
 const App = () => {
   return (
     <Provider store={Store}>
-      <Router />
+      <TopBar/>
+      <MenuBar/>
     </Provider>
   );
 };
