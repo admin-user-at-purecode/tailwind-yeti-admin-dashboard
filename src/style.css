@@ -22,11 +22,15 @@
 /* Main */
 @import "tailwindcss/base.css";
 @import "css/base.css";
+@import "components/inputgroup/style.css";
 @import "tailwindcss/components.css";
 @import "css/components.css";
 @import "css/sections.css";
+@import "pages/FormInputGroups/style.css";
 @import "components/footer/style.css";
 @import "tailwindcss/utilities.css";
+@import "components/breadcrumb/style.css";
+@import "components/Button/style.css";
 
 :root {
   /* Primary */

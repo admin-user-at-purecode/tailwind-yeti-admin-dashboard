@@ -10,6 +10,7 @@
     [
         "topBar",
         "MenuBar",
+        "FormInputGroups",
         "footer"
     ],
     "component_information":  
@@ -42,7 +43,28 @@
                 }
             },
             "children_orientation_description": "Menu deatils are accordions where all items are in list format"   
-        }
+        },
+        "FormInputGroups": 
+        {
+            "count": 1,
+            "location": "Directly below header, center of page",
+            "description": "A container with 4 cards",
+            "children":
+            {
+                "Breadcrumb": {
+                    "count": 1,
+                    "location": "top of the FormInputGroups",
+                    "description": "Page title"
+                },
+                "inputgroup": {
+                    "count": 4,
+                    "location": "Just below FormInputGroups",
+                    "description": "Card containing input group types with different css"
+                    
+                }
+            }  
+        },
+        "Footer": 1
        
     },
     "functionality":
