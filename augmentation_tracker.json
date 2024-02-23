@@ -9,7 +9,8 @@
     "component_names":    
     [
         "topBar",
-        "MenuBar"
+        "MenuBar",
+        "dashboard"
     ],
     "component_information":  
     {
@@ -38,6 +39,27 @@
                             "description": "Sub menu items are accordions that are visible when clicked on menu item in menuBar"
                         }
                     }
+                }
+            },
+            "children_orientation_description": "Menu deatils are accordions where all items are in list format"   
+        },
+        "dashboard": 
+        {
+            "count": 1,
+            "location": "At center of page. Scrollable.",
+            "description": "A container with subcards showing charts",
+            "children":
+            {
+                "Area": {
+                    "count": 1,
+                    "location": "Left side below post cards",
+                    "description": "Contains visual data of visitors"
+                },
+                "LineWithAnnotationChart": {
+                    "count": 4,
+                    "location": "Top right side",
+                    "description": "Card containing LineWithAnnotationChart"
+                    
                 }
             },
             "children_orientation_description": "Menu deatils are accordions where all items are in list format"   
