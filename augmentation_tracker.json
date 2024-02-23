@@ -9,7 +9,8 @@
     "component_names":    
     [
         "topBar",
-        "MenuBar"
+        "MenuBar",
+        "footer"
     ],
     "component_information":  
     {
@@ -42,6 +43,7 @@
             },
             "children_orientation_description": "Menu deatils are accordions where all items are in list format"   
         }
+       
     },
     "functionality":
     {

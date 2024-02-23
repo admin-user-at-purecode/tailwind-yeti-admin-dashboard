@@ -1,0 +1,29 @@
+
+/* 
+Footer
+*/
+.dark .footer {
+    .divider {
+      @apply text-gray-700;
+    }
+  }
+  
+  .footer {
+    @apply flex flex-auto items-center border-t border-border mt-10 py-5 leading-none font-heading text-sm;
+  
+    nav {
+      @apply ml-auto;
+    }
+  
+    .divider {
+      @apply mx-2 text-gray-300;
+    }
+  }
+  
+  [dir="rtl"] {
+    .footer {
+      nav {
+        @apply ml-0 mr-auto;
+      }
+    }
+  }
