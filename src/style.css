@@ -25,6 +25,9 @@
 @import "tailwindcss/components.css";
 @import "css/components.css";
 @import "css/sections.css";
+@import "pages/dashboard/style.css";
+@import "components/badge/style.css";
+@import "components/tabs/style.css";
 @import "tailwindcss/utilities.css";
 
 :root {

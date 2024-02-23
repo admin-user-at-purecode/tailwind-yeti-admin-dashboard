@@ -1,0 +1,44 @@
+
+/*
+Tab
+*/
+.tab-nav {
+    @apply flex flex-nowrap border-b border-divider;
+  
+    a,
+    .nav-link {
+      @apply relative inline-block pb-1 font-heading font-bold;
+  
+      &:before {
+        @apply absolute;
+        content: "";
+      }
+  
+      &.active {
+        @apply text-primary;
+  
+        &:before {
+          @apply h-1 right-0 left-0 bg-primary rounded-full;
+          bottom: -2px;
+        }
+      }
+  
+      + a,
+      + .nav-link {
+        @apply ml-4;
+      }
+    }
+  }
+  
+  [dir="rtl"] {
+    .tab-nav {
+      a,
+      .nav-link {
+        + a,
+        + .nav-link {
+          @apply ml-0 mr-4;
+        }
+      }
+    }
+  }
+  

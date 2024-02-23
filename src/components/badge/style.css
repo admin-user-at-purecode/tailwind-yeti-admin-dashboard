@@ -1,0 +1,63 @@
+/*
+Badges
+*/
+.badge {
+    @apply inline-flex items-center px-2 border border-transparent text-xs text-component rounded-full;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  
+    &_primary {
+      @apply bg-primary;
+    }
+  
+    &_secondary {
+      @apply bg-secondary;
+    }
+  
+    &_success {
+      @apply bg-success;
+    }
+  
+    &_danger {
+      @apply bg-danger;
+    }
+  
+    &_warning {
+      @apply bg-warning;
+    }
+  
+    &_info {
+      @apply bg-info;
+    }
+  
+    &_outlined {
+      @apply bg-transparent;
+  
+      &.badge {
+        &_primary {
+          @apply border-primary text-primary;
+        }
+  
+        &_secondary {
+          @apply border-secondary text-secondary;
+        }
+  
+        &_success {
+          @apply border-success text-success;
+        }
+  
+        &_danger {
+          @apply border-danger text-danger;
+        }
+  
+        &_warning {
+          @apply border-warning text-warning;
+        }
+  
+        &_info {
+          @apply border-info text-info;
+        }
+      }
+    }
+  }
+  
