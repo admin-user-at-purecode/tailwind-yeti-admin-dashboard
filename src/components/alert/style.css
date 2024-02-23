@@ -1,0 +1,126 @@
+/*
+Alerts
+*/
+.alert {
+    &-wrapper {
+      @apply overflow-y-hidden;
+      @apply transition-all duration-200 ease-linear;
+    }
+  
+    @apply relative border border-transparent rounded-xl px-5 py-4 text-component;
+  
+    strong {
+      @apply mr-2;
+    }
+  
+    .dismiss {
+      @apply absolute top-0 right-0 mt-2 mr-4 text-2xl leading-normal;
+  
+      &:hover {
+        @apply text-white;
+      }
+    }
+  
+    &_primary {
+      @apply bg-primary;
+    }
+  
+    &_secondary {
+      @apply bg-secondary;
+    }
+  
+    &_success {
+      @apply bg-success;
+    }
+  
+    &_danger {
+      @apply bg-danger;
+    }
+  
+    &_warning {
+      @apply bg-warning;
+    }
+  
+    &_info {
+      @apply bg-info;
+    }
+  
+    &_outlined {
+      @apply bg-transparent;
+  
+      &.alert {
+        &_primary {
+          @apply border-primary text-primary;
+  
+          .dismiss {
+            &:hover {
+              @apply text-primary;
+            }
+          }
+        }
+  
+        &_secondary {
+          @apply border-secondary text-secondary;
+  
+          .dismiss {
+            &:hover {
+              @apply text-secondary;
+            }
+          }
+        }
+  
+        &_success {
+          @apply border-success text-success;
+  
+          .dismiss {
+            &:hover {
+              @apply text-success;
+            }
+          }
+        }
+  
+        &_danger {
+          @apply border-danger text-danger;
+  
+          .dismiss {
+            &:hover {
+              @apply text-danger;
+            }
+          }
+        }
+  
+        &_warning {
+          @apply border-warning text-warning;
+  
+          .dismiss {
+            &:hover {
+              @apply text-warning;
+            }
+          }
+        }
+  
+        &_info {
+          @apply border-info text-info;
+  
+          .dismiss {
+            &:hover {
+              @apply text-info;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  [dir="rtl"] {
+    .alert {
+      strong {
+        @apply mr-0 ml-2;
+      }
+  
+      .dismiss {
+        @apply right-auto left-0 mr-0 ml-4;
+      }
+    }
+  }
+  

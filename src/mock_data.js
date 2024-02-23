@@ -61,3 +61,11 @@ export const MenuDetailMenuTypes = [
   { type: "icon-only", icon: "la la-th-large", label: "Icon Only" },
   { type: "wide", icon: "la la-arrows-alt-h", label: "Wide" },
 ];
+
+export const alertData = [
+  { color: "secondary" },
+  { color: "success" },
+  { color: "danger" },
+  { color: "warning" },
+  { color: "info" },
+]

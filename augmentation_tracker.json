@@ -9,7 +9,8 @@
     "component_names":    
     [
         "topBar",
-        "MenuBar"
+        "MenuBar", 
+        "ComponentAlert"
     ],
     "component_information":  
     {
@@ -41,12 +42,18 @@
                 }
             },
             "children_orientation_description": "Menu deatils are accordions where all items are in list format"   
-        }
+        },
+        "ComponentAlert": 
+        {
+            "count": 1,
+            "location": "Below header",
+            "description": "A container Conatining two cards with multiple alerts with different css"
+         }
     },
     "functionality":
     {
-        "sidebar_toggle": "a toggle feature that allows the sidebar to be hidden or shown along with resizing to show only icons"
-      
+        "sidebar_toggle": "a toggle feature that allows the sidebar to be hidden or shown along with resizing to show only icons",
+        "close_alert": "Clicking on cross removed that specific Alert item from list"
     }
 
 }
