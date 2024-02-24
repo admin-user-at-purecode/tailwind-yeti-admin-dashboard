@@ -25,7 +25,14 @@
 @import "tailwindcss/components.css";
 @import "css/components.css";
 @import "css/sections.css";
-@import "components/footer/style.css";
+@import "pages/components/style.css";
+@import "components/breadcrumb/style.css";
+@import "components/radio/style.css";
+@import "components/checkbox/style.css";
+@import "components/fileBrowser/style.css";
+@import "components/ratingStars/style.css";
+@import "components/rangeSlider/style.css";
+@import "components/customSelect/style.css";
 @import "tailwindcss/utilities.css";
 
 :root {
@@ -140,3 +147,4 @@ Top Bar
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+

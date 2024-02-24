@@ -1,0 +1,20 @@
+/*
+Custom Range Slider
+*/
+.dark .custom-range {
+    @apply bg-gray-700;
+  }
+  
+  .custom-range {
+    @apply appearance-none outline-none w-full h-2 bg-gray-300 rounded-full opacity-100;
+    @apply transition-all duration-200 ease-linear;
+  
+    &::-webkit-slider-thumb {
+      @apply appearance-none w-6 h-6 bg-primary border-transparent rounded-full shadow cursor-pointer;
+    }
+  
+    &::-moz-range-thumb {
+      @apply appearance-none w-6 h-6 bg-primary border-transparent rounded-full shadow cursor-pointer;
+    }
+  }
+  

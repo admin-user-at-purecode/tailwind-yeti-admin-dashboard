@@ -1,0 +1,402 @@
+/* 
+Workspace
+*/
+.workspace {
+    @apply relative flex flex-auto flex-col mt-20 px-5 pt-5;
+  
+    &_with-sidebar {
+      @apply overflow-y-auto;
+      height: calc(100vh - 5rem);
+    }
+  }
+  
+  @media screen(md) {
+    .workspace {
+      @apply px-10 pt-10;
+    }
+  }
+  
+  /*
+Cards
+*/
+.dark .card {
+    &_hoverable {
+      &:hover {
+        @apply bg-primary bg-opacity-5;
+      }
+    }
+  
+    &_selected {
+      @apply bg-primary bg-opacity-5;
+  
+      &:hover {
+        @apply bg-primary bg-opacity-5;
+      }
+    }
+  }
+  
+  .card {
+    @apply rounded-xl bg-foreground shadow;
+  
+    &_hoverable {
+      &:hover {
+        @apply bg-primary-50;
+      }
+    }
+  
+    &_selected {
+      @apply bg-primary-50;
+  
+      &:hover {
+        @apply bg-primary-50;
+      }
+    }
+  
+    &_row {
+      @apply flex flex-col w-full;
+  
+      .image {
+        @apply relative m-5;
+        min-width: 180px;
+  
+        img {
+          @apply object-cover;
+        }
+      }
+  
+      .header {
+        @apply self-center m-5 mt-0;
+      }
+  
+      .body {
+        @apply flex flex-col p-5 whitespace-nowrap border-t border-divider;
+      }
+  
+      .actions {
+        @apply flex p-5 border-t border-divider;
+      }
+    }
+  
+    &_column {
+      @apply flex flex-col w-full;
+  
+      .image {
+        @apply relative m-5;
+  
+        img {
+          @apply object-cover;
+        }
+      }
+  
+      .header {
+        @apply m-5 mt-0;
+      }
+  
+      .body {
+        @apply flex flex-col mt-auto p-5 whitespace-nowrap border-t border-divider;
+      }
+  
+      .actions {
+        @apply flex p-5 border-t border-divider;
+      }
+    }
+  
+    &_list {
+      @apply flex items-center p-5;
+  
+      .image {
+        @apply flex-shrink-0 bg-primary;
+        width: 80px;
+        height: 80px;
+  
+        img {
+          @apply w-full h-full object-cover;
+        }
+  
+        &_icon {
+          @apply flex items-center justify-center bg-transparent;
+        }
+      }
+  
+      .body {
+        @apply mx-5;
+      }
+  
+      .actions {
+        @apply ml-auto;
+      }
+    }
+  }
+  
+  @media screen(lg) {
+    .card {
+      &_row {
+        @apply flex-row;
+  
+        .header {
+          @apply ml-0 mt-5;
+        }
+  
+        .body {
+          @apply ml-auto border-t-0 border-l text-right;
+        }
+  
+        .actions {
+          @apply flex-col border-t-0 border-l;
+        }
+      }
+    }
+  }
+  
+  [dir="rtl"] {
+    .card {
+      &_list {
+        .actions {
+          @apply ml-0 mr-auto;
+        }
+      }
+    }
+  
+    @media screen(lg) {
+      .card {
+        &_row {
+          .header {
+            @apply ml-5 mr-0;
+          }
+  
+          .body {
+            @apply ml-0 mr-auto border-l-0 border-r;
+          }
+  
+          .actions {
+            @apply border-l-0 border-r;
+          }
+        }
+      }
+    }
+  }
+  
+
+  /*
+Badges
+*/
+.badge {
+    @apply inline-flex items-center px-2 border border-transparent text-xs text-component rounded-full;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  
+    &_primary {
+      @apply bg-primary;
+    }
+  
+    &_secondary {
+      @apply bg-secondary;
+    }
+  
+    &_success {
+      @apply bg-success;
+    }
+  
+    &_danger {
+      @apply bg-danger;
+    }
+  
+    &_warning {
+      @apply bg-warning;
+    }
+  
+    &_info {
+      @apply bg-info;
+    }
+  
+    &_outlined {
+      @apply bg-transparent;
+  
+      &.badge {
+        &_primary {
+          @apply border-primary text-primary;
+        }
+  
+        &_secondary {
+          @apply border-secondary text-secondary;
+        }
+  
+        &_success {
+          @apply border-success text-success;
+        }
+  
+        &_danger {
+          @apply border-danger text-danger;
+        }
+  
+        &_warning {
+          @apply border-warning text-warning;
+        }
+  
+        &_info {
+          @apply border-info text-info;
+        }
+      }
+    }
+  }
+  
+  /*
+Dropzone
+*/
+.dropzone {
+  @apply flex items-center justify-center p-5 h-40 border-2 border-dotted border-border rounded-xl;
+
+  h3 {
+    @apply text-center;
+  }
+
+  &:hover {
+    @apply border-primary;
+
+    h3 {
+      @apply text-primary;
+    }
+  }
+}
+/*
+Buttons
+*/
+.btn {
+  @apply inline-flex items-center rounded-full px-5 py-2 border border-transparent font-bold;
+  @apply text-component !important;
+  @apply transition-all duration-200 ease-linear;
+
+  &:hover {
+    @apply text-component;
+  }
+
+  &:disabled {
+    @apply opacity-50;
+  }
+
+  &_primary {
+    @apply bg-primary;
+
+    &:hover:not([disabled]) {
+      @apply bg-primary-700;
+    }
+  }
+
+  &_secondary {
+    @apply bg-secondary;
+
+    &:hover:not([disabled]) {
+      @apply bg-opacity-75;
+    }
+  }
+
+  &_success {
+    @apply bg-success;
+
+    &:hover:not([disabled]) {
+      @apply bg-opacity-75;
+    }
+  }
+
+  &_danger {
+    @apply bg-danger;
+
+    &:hover:not([disabled]) {
+      @apply bg-opacity-75;
+    }
+  }
+
+  &_warning {
+    @apply bg-warning;
+
+    &:hover:not([disabled]) {
+      @apply bg-opacity-75;
+    }
+  }
+
+  &_info {
+    @apply bg-info;
+
+    &:hover:not([disabled]) {
+      @apply bg-opacity-75;
+    }
+  }
+
+  &_outlined {
+    @apply bg-transparent;
+
+    &:hover:not([disabled]) {
+      @apply bg-transparent;
+    }
+
+    &.btn {
+      &_primary {
+        @apply border-primary;
+        @apply text-primary !important;
+
+        &:hover:not([disabled]) {
+          @apply border-primary-700;
+          @apply text-primary-700 !important;
+        }
+      }
+
+      &_secondary {
+        @apply border-secondary;
+        @apply text-secondary !important;
+
+        &:hover:not([disabled]) {
+          @apply border-opacity-75;
+          @apply text-opacity-75 !important;
+        }
+      }
+
+      &_success {
+        @apply border-success;
+        @apply text-success !important;
+
+        &:hover:not([disabled]) {
+          @apply border-opacity-75;
+          @apply text-opacity-75 !important;
+        }
+      }
+
+      &_danger {
+        @apply border-danger;
+        @apply text-danger !important;
+
+        &:hover:not([disabled]) {
+          @apply border-opacity-75;
+          @apply text-opacity-75 !important;
+        }
+      }
+
+      &_warning {
+        @apply border-warning;
+        @apply text-warning !important;
+
+        &:hover:not([disabled]) {
+          @apply border-opacity-75;
+          @apply text-opacity-75 !important;
+        }
+      }
+
+      &_info {
+        @apply border-info;
+        @apply text-info !important;
+
+        &:hover:not([disabled]) {
+          @apply border-opacity-75;
+          @apply text-opacity-75 !important;
+        }
+      }
+    }
+  }
+
+  &-icon {
+    @apply w-8 h-8 p-0 justify-center text-xl leading-none;
+
+    &_large {
+      @apply w-10 h-10;
+    }
+  }
+}
