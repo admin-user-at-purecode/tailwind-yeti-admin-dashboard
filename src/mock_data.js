@@ -61,3 +61,11 @@ export const MenuDetailMenuTypes = [
   { type: "icon-only", icon: "la la-th-large", label: "Icon Only" },
   { type: "wide", icon: "la la-arrows-alt-h", label: "Wide" },
 ];
+
+export const btnDat = [
+  { color: "secondary", text: "Secondary", disabled: false },
+  { color: "success", text: "Success", disabled: false },
+  { color: "danger", text: "Danger", disabled: false },
+  { color: "warning", text: "Warning", disabled: false },
+  { color: "info", text: "Info", disabled: false },
+];

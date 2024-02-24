@@ -44,7 +44,7 @@ const BreadcrumbItem = (props) => {
   if (link) {
     return (
       <li>
-        <Link to={link}>{children}</Link>
+        <a href={link}>{children}</a>
       </li>
     );
   } else {

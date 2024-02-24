@@ -25,8 +25,11 @@
 @import "tailwindcss/components.css";
 @import "css/components.css";
 @import "css/sections.css";
+@import "components/breadcrumb/style.css";
 @import "components/footer/style.css";
+@import "components/button/style.css";
 @import "tailwindcss/utilities.css";
+@import "pages/componentsButtons/style.css";
 
 :root {
   /* Primary */

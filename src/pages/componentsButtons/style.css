@@ -1,3 +1,17 @@
+.workspace {
+    @apply relative flex flex-auto flex-col mt-20 px-5 pt-5;
+  
+    &_with-sidebar {
+      @apply overflow-y-auto;
+      height: calc(100vh - 5rem);
+    }
+  }
+  
+  @media screen(md) {
+    .workspace {
+      @apply px-10 pt-10;
+    }
+  }
 
   .card {
     @apply rounded-xl bg-foreground shadow;
