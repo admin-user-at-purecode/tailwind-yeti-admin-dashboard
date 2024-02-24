@@ -26,7 +26,11 @@
 @import "css/components.css";
 @import "css/sections.css";
 @import "components/footer/style.css";
+@import "pages/calendar/style.css";
 @import "tailwindcss/utilities.css";
+@import "components/breadcrumb/style.css";
+
+
 
 :root {
   /* Primary */

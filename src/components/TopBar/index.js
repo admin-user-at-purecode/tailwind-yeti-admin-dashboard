@@ -4,7 +4,6 @@ import { toggleMenu } from "actions";
 
 import classNames from "classnames";
 
-// import useDarkMode from "hooks/useDarkMode";
 import useFullscreen from "hooks/useFullScreen";
 import Tooltip from "../tooltip";
 import Dropdown from "../dropdown";
@@ -16,21 +15,17 @@ const TopBar = () => {
 
   const menuBarVisible = useSelector((state) => state.root.menuBarVisible);
 
-  // const [darkMode, toggleDarkMode] = useDarkMode();
   const [isFullscreen, toggleFullscreen] = useFullscreen();
 
   return (
     <header className="top-bar">
-      {/* Menu Toggler */}
       <button
         className="menu-toggler la la-bars"
         onClick={() => dispatch(toggleMenu(!menuBarVisible))}
       ></button>
 
-      {/* Brand */}
       <span className="brand">Yeti</span>
 
-      {/* Search */}
       <form className="hidden md:block ltr:ml-10 rtl:mr-10">
         <label className="form-control-addon-within rounded-full">
           <input className="form-control border-none" placeholder="Search" />
@@ -38,18 +33,13 @@ const TopBar = () => {
         </label>
       </form>
 
-      {/* Right */}
       <div className="flex items-center ltr:ml-auto rtl:mr-auto">
-        {/* Dark Mode */}
         <Tooltip content="Toggle Dark Mode">
           <Switch
             outlined
-            // checked={false}
-            // onChange={() => toggleDarkMode()}
           />
         </Tooltip>
 
-        {/* Fullscreen */}
         <Tooltip content="Fullscreen">
           <button
             className={classNames(
@@ -63,7 +53,6 @@ const TopBar = () => {
           ></button>
         </Tooltip>
 
-        {/* Apps */}
         <div className="self-stretch">
           <Dropdown
             arrow={true}
@@ -109,7 +98,6 @@ const TopBar = () => {
           </Dropdown>
         </div>
 
-        {/* Notifications */}
         <div className="self-stretch">
           <Dropdown
             arrow={true}
@@ -156,7 +144,6 @@ const TopBar = () => {
           </Dropdown>
         </div>
 
-        {/* User Menu */}
         <div>
           <Dropdown
             arrow={true}
