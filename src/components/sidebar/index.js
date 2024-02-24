@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 import Backdrop from "components/Backdrop";
 
-import useWindowSize from "utilities/hooks/useWindowSize";
+import useWindowSize from "hooks/useWindowSize";
 
 const Sidebar = (props) => {
   const { children } = props;
