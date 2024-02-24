@@ -4,9 +4,9 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import { CSSTransition } from "react-transition-group";
 
-import Backdrop from "components/Backdrop";
+import Backdrop from "components/backdrop";
 
-import useOnClickOutside from "utilities/hooks/useOnClickOutside";
+import useOnClickOutside from "hooks/useOnClickOutside";
 
 const ModalContext = createContext();
 

@@ -27,6 +27,18 @@
 @import "css/sections.css";
 @import "components/footer/style.css";
 @import "tailwindcss/utilities.css";
+@import "components/card/style.css";
+@import "components/modal/style.css";
+@import "pages/modals/style.css";
+@import "components/breadcrumb/style.css";
+@import "components/button/style.css";
+
+
+
+
+
+
+
 
 :root {
   /* Primary */
