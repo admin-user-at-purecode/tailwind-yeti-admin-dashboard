@@ -25,7 +25,11 @@
 @import "tailwindcss/components.css";
 @import "css/components.css";
 @import "css/sections.css";
+@import "components/breadcrumb/style.css";
+@import "pages/formValidations/style.css";
 @import "components/footer/style.css";
+@import "components/checkbox/style.css";
+@import "components/radio/style.css";
 @import "tailwindcss/utilities.css";
 
 :root {
