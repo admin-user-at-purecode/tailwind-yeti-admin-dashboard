@@ -61,3 +61,24 @@ export const MenuDetailMenuTypes = [
   { type: "icon-only", icon: "la la-th-large", label: "Icon Only" },
   { type: "wide", icon: "la la-arrows-alt-h", label: "Wide" },
 ];
+
+export const lableInputData = [
+  {
+    id: "input-1",
+    cardTitle: "Input Label Over",
+    labelClassName:
+      "bg-input top-0 ltr:ml-3 rtl:mr-3 px-1 rounded font-heading uppercase",
+  },
+  {
+    id: "input-2",
+    cardTitle: "Input Label Boxed Over",
+    labelClassName:
+      "bg-input border border-border rounded top-0 ltr:ml-4 rtl:mr-4 px-2 font-heading",
+  },
+  {
+    id: "input-3",
+    cardTitle: "Input Label In",
+    labelClassName:
+      "absolute block top-0 mt-2 ltr:ml-4 rtl:mr-4 font-heading uppercase",
+  },
+]

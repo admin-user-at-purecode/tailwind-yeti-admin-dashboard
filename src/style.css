@@ -26,7 +26,9 @@
 @import "css/components.css";
 @import "css/sections.css";
 @import "components/footer/style.css";
+@import "components/breadcrumb/style.css";
 @import "tailwindcss/utilities.css";
+@import "pages/formLayout/style.css";
 
 :root {
   /* Primary */
