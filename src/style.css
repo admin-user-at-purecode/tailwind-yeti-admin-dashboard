@@ -26,6 +26,10 @@
 @import "css/components.css";
 @import "css/sections.css";
 @import "components/footer/style.css";
+@import "components/breadcrumb/style.css";
+@import "components/badge/style.css";
+@import "components/card/style.css";
+@import "pages/componentBadges/style.css";
 @import "tailwindcss/utilities.css";
 
 :root {

@@ -61,3 +61,12 @@ export const MenuDetailMenuTypes = [
   { type: "icon-only", icon: "la la-th-large", label: "Icon Only" },
   { type: "wide", icon: "la la-arrows-alt-h", label: "Wide" },
 ];
+
+export const badges = [
+  { color: "primary", text: "Primary" },
+  { color: "secondary", text: "Secondary" },
+  { color: "success", text: "Success" },
+  { color: "danger", text: "Danger" },
+  { color: "warning", text: "Warning" },
+  { color: "info", text: "Info" }
+];
