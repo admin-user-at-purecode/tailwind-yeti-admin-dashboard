@@ -1,0 +1,84 @@
+  .tippy-box {
+    &[data-theme~="light-border"] {
+      @apply bg-foreground rounded-xl border border-divider shadow text-normal;
+  
+      > .tippy-backdrop {
+        @apply bg-foreground;
+      }
+  
+      &[data-placement^="top"] > .tippy-arrow {
+        &::before {
+          @apply border-t-white;
+        }
+  
+        &::after {
+          @apply border-t-divider;
+        }
+      }
+  
+      &[data-placement^="bottom"] > .tippy-arrow {
+        &::before {
+          @apply border-b-white;
+          bottom: 15px;
+        }
+  
+        &::after {
+          @apply border-b-divider;
+        }
+      }
+  
+      &[data-placement^="left"] > .tippy-arrow {
+        &::before {
+          @apply border-l-white;
+        }
+  
+        &::after {
+          @apply border-l-divider;
+        }
+      }
+  
+      &[data-placement^="right"] > .tippy-arrow {
+        &::before {
+          @apply border-r-white;
+          right: 15px;
+        }
+  
+        &::after {
+          @apply border-r-divider;
+        }
+      }
+  
+      > .tippy-svg-arrow {
+        @apply fill-white;
+      }
+  
+      > .tippy-content {
+        @apply rounded-xl p-0 overflow-hidden;
+  
+        .dropdown-menu {
+          @apply block;
+        }
+  
+        .custom-dropdown-menu {
+          @apply block;
+        }
+  
+        .search-select-menu {
+          @apply block;
+        }
+      }
+    }
+  
+    &[data-theme~="tooltip"] {
+      > .tippy-content {
+        @apply px-5 py-2;
+      }
+    }
+  
+    &[data-theme~="popover"] {
+      > .tippy-content {
+        @apply p-5;
+      }
+    }
+  }
+  

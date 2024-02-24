@@ -1,0 +1,30 @@
+.dark .rating-stars {
+    span {
+      @apply text-gray-700;
+    }
+  }
+  
+  .rating-stars {
+    @apply flex flex-row-reverse justify-end;
+  
+    span {
+      @apply text-2xl leading-none text-gray-300 cursor-pointer;
+  
+      &.active {
+        @apply text-primary;
+  
+        ~ span {
+          @apply text-primary;
+        }
+      }
+  
+      &:hover {
+        @apply text-primary;
+  
+        ~ span {
+          @apply text-primary;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,43 @@
+.toasts-container {
+    @apply absolute pt-5 pr-5 pb-20 pl-5 z-10;
+  }
+  
+  .toast {
+    @apply rounded-xl shadow bg-foreground bg-opacity-90;
+    @apply transition-all duration-200 ease-linear;
+  
+    .toast-header {
+      @apply flex items-center px-5 py-2 border-b border-divider;
+  
+      small {
+        @apply mr-5 ml-auto;
+      }
+  
+      .close {
+        @apply m-0 p-0 text-2xl leading-none;
+  
+        &:hover {
+          @apply text-primary;
+        }
+      }
+    }
+  
+    .toast-body {
+      @apply p-5;
+    }
+  }
+  
+  @media screen(lg) {
+    .toast {
+      min-width: 400px;
+    }
+  }
+  
+  [dir="rtl"] {
+    .toast {
+      small {
+        @apply mr-auto ml-5;
+      }
+    }
+  }
+  
