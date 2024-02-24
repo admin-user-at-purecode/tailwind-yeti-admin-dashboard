@@ -27,6 +27,10 @@
 @import "css/sections.css";
 @import "components/footer/style.css";
 @import "tailwindcss/utilities.css";
+@import "components/breadcrumb/style.css";
+@import "components/button/style.css";
+@import "pages/collapse/style.css";
+
 
 :root {
   /* Primary */

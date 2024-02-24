@@ -1,33 +1,36 @@
+
+/*
+Breadcrumb
+*/
 .breadcrumb {
-    @apply mb-5;
-  
-    ul {
+  @apply mb-5;
+
+  ul {
+    @apply flex items-center;
+
+    li,
+    a {
       @apply flex items-center;
-  
-      li,
-      a {
-        @apply flex items-center;
-      }
-  
-      .divider {
-        @apply mx-1 text-muted;
-      }
-  
-      a {
-        @apply text-muted;
-  
-        &:hover {
-          @apply text-primary;
-        }
-      }
     }
-  
-    &_alt {
-      @apply rounded-xl shadow bg-foreground bg-opacity-20;
-  
-      ul {
-        @apply flex items-center;
+
+    .divider {
+      @apply mx-1 text-muted;
+    }
+
+    a {
+      @apply text-muted;
+
+      &:hover {
+        @apply text-primary;
       }
     }
   }
-  
+
+  &_alt {
+    @apply rounded-xl shadow bg-foreground bg-opacity-20;
+
+    ul {
+      @apply flex items-center;
+    }
+  }
+}

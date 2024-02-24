@@ -61,3 +61,9 @@ export const MenuDetailMenuTypes = [
   { type: "icon-only", icon: "la la-th-large", label: "Icon Only" },
   { type: "wide", icon: "la la-arrows-alt-h", label: "Wide" },
 ];
+
+export const AccordionBodyText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusamus porro eos soluta! Debitis ab quis namsed, dolorum dolore illum qui iure eius voluptatum nemo accusamus blanditiis neque id."
+
+export const ButtonText = "Toggle Collapse"
+
+export const AccordionTitle = "Accordion Title"
