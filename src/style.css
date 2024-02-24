@@ -25,9 +25,12 @@
 @import "tailwindcss/components.css";
 @import "css/components.css";
 @import "css/sections.css";
+@import "components/card/style.css";
+@import "components/sidebar/style.css";
 @import "components/footer/style.css";
+@import "components/breadcrumb/style.css";
+@import "pages/componentsAvatar/style.css";
 @import "tailwindcss/utilities.css";
-
 :root {
   /* Primary */
   --color-primary: theme("skin.sky.DEFAULT");

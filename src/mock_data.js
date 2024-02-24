@@ -1,3 +1,5 @@
+import Img from './assets/images/potato.jpg'
+
 export const MenuDetailUIItems = [
   { text: "Components", icon: "la la-cubes"},
   { text: "Input Groups", icon: "la la-stop"},
@@ -60,4 +62,79 @@ export const MenuDetailMenuTypes = [
   { type: "hidden", icon: "la la-hand-point-left", label: "Hidden" },
   { type: "icon-only", icon: "la la-th-large", label: "Icon Only" },
   { type: "wide", icon: "la la-arrows-alt-h", label: "Wide" },
+];
+
+export const avatars = [
+  [
+    {
+      title: "Default",
+      avatars: [
+        { props: {}, content: <img src={Img} alt="" /> },
+        { props: { size: "medium" }, content: <img src={Img} alt="" /> },
+        { props: { size: "large" }, content: <img src={Img} alt="" /> }
+      ]
+    },
+    {
+      title: "Default With Initials",
+      avatars: [
+        { props: {}, content: "JD" },
+        { props: { size: "medium" }, content: "JD" },
+        { props: { size: "large" }, content: "JD" }
+      ]
+    }
+  ],
+  [
+    {
+      title: "Default With Status",
+      avatars: [
+        { props: { status: "success" }, content: <img src={Img} alt="" /> },
+        { props: { size: "medium", status: "warning" }, content: <img src={Img} alt="" /> },
+        { props: { size: "large", status: "danger" }, content: <img src={Img} alt="" /> }
+      ]
+    },
+    {
+      title: "Default With Initials & Status",
+      avatars: [
+        { props: { status: "success" }, content: "JD" },
+        { props: { size: "medium", status: "warning" }, content: "JD" },
+        { props: { size: "large", status: "danger" }, content: "JD" }
+      ]
+    }
+  ],
+  [
+    {
+      title: "Shadowed",
+      avatars: [
+        { props: { withShadow: true }, content: <img src={Img} alt="" /> },
+        { props: { size: "medium", withShadow: true }, content: <img src={Img} alt="" /> },
+        { props: { size: "large", withShadow: true }, content: <img src={Img} alt="" /> }
+      ]
+    },
+    {
+      title: "Shadowed With Initials",
+      avatars: [
+        { props: { withShadow: true }, content: "JD" },
+        { props: { size: "medium", withShadow: true }, content: "JD" },
+        { props: { size: "large", withShadow: true }, content: "JD" }
+      ]
+    }
+  ],
+  [
+    {
+      title: "Shadowed With Status",
+      avatars: [
+        { props: { status: "success", withShadow: true }, content: <img src={Img} alt="" /> },
+        { props: { size: "medium", status: "warning", withShadow: true }, content: <img src={Img} alt="" /> },
+        { props: { size: "large", status: "danger", withShadow: true }, content: <img src={Img} alt="" /> }
+      ]
+    },
+    {
+      title: "Shadowed With Initials & Status",
+      avatars: [
+        { props: { status: "success", withShadow: true }, content: "JD" },
+        { props: { size: "medium", status: "warning", withShadow: true }, content: "JD" },
+        { props: { size: "large", status: "danger", withShadow: true }, content: "JD" }
+      ]
+    }
+  ]
 ];
