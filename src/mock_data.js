@@ -61,3 +61,12 @@ export const MenuDetailMenuTypes = [
   { type: "icon-only", icon: "la la-th-large", label: "Icon Only" },
   { type: "wide", icon: "la la-arrows-alt-h", label: "Wide" },
 ];
+
+export const carouselData = [
+  {title: "Published Post", value: 18},
+  {title: "Cloudy", value: 10},
+  {title: "Sunny", value: 16},
+  {title: "Monday", value: 2},
+  {title: "Testing Data", value: 15},
+  {title: "Random Value", value: 28},
+]

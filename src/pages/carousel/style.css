@@ -1,0 +1,65 @@
+.workspace {
+    @apply relative flex flex-auto flex-col mt-20 px-5 pt-5;
+  
+    &_with-sidebar {
+      @apply overflow-y-auto;
+      height: calc(100vh - 5rem);
+    }
+  }
+  
+  @media screen(md) {
+    .workspace {
+      @apply px-10 pt-10;
+    }
+  }
+
+/*
+Caraousel
+*/
+.glide {
+    &__arrow {
+      @apply absolute block p-2 top-1/2 uppercase bg-foreground border border-border rounded-full shadow opacity-100 cursor-pointer leading-none transform -translate-y-3/4;
+  
+      &:hover {
+        @apply border-primary text-primary;
+      }
+  
+      &--left {
+        @apply -left-10;
+      }
+  
+      &--right {
+        @apply -right-10;
+      }
+  
+      &--disabled {
+        @apply opacity-50;
+      }
+    }
+  
+    &__bullets {
+      @apply mt-4 leading-none text-center;
+    }
+  
+    &__bullet {
+      @apply w-3 h-3 mx-1 bg-foreground border border-border rounded-full shadow cursor-pointer;
+  
+      &:hover,
+      &:focus {
+        @apply bg-primary border-transparent;
+      }
+  
+      &--active {
+        @apply bg-primary border-transparent;
+      }
+    }
+  
+    &--swipeable {
+      @apply cursor-grab;
+    }
+  
+    &--dragging {
+      @apply cursor-grabbing;
+    }
+  }
+  
