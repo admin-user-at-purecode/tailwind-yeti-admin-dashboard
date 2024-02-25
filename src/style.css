@@ -27,6 +27,25 @@
 @import "css/sections.css";
 @import "components/footer/style.css";
 @import "tailwindcss/utilities.css";
+@import "tailwindcss/utilities.css";
+@import "pages/editor/style.css";
+
+@import "components/breadcrumb/style.css";
+@import "components/card/style.css";
+@import "components/dropdown/style.css"
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 :root {
   /* Primary */
