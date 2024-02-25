@@ -1,0 +1,39 @@
+/* 
+Workspace
+*/
+.workspace {
+    @apply relative flex flex-auto flex-col mt-20 px-5 pt-5;
+  
+    &_with-sidebar {
+      @apply overflow-y-auto;
+      height: calc(100vh - 5rem);
+    }
+  }
+  
+  @media screen(md) {
+    .workspace {
+      @apply px-10 pt-10;
+    }
+  }
+  /*
+Sortable
+*/
+.sortable {
+    li {
+      @apply border border-divider px-4 py-2 rounded mb-2;
+  
+      .handle {
+        @apply mr-2 cursor-grab;
+      }
+    }
+  }
+  
+  [dir="rtl"] {
+    .sortable {
+      li {
+        .handle {
+          @apply mr-0 ml-2;
+        }
+      }
+    }
+  }
