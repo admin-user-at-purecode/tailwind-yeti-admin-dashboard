@@ -26,6 +26,11 @@
 @import "css/components.css";
 @import "css/sections.css";
 @import "components/footer/style.css";
+@import "components/breadcrumb/style.css";
+@import "components/button/style.css";
+@import "components/card/style.css";
+@import "components/popover/style.css";
+@import "pages/componentsPopoverTooltips/style.css";
 @import "tailwindcss/utilities.css";
 
 :root {
