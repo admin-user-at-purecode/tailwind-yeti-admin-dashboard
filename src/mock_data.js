@@ -61,3 +61,13 @@ export const MenuDetailMenuTypes = [
   { type: "icon-only", icon: "la la-th-large", label: "Icon Only" },
   { type: "wide", icon: "la la-arrows-alt-h", label: "Wide" },
 ];
+
+export const AccordionData = [
+  {title:"Who Created Potato",index:1},
+  {title:"We Want Potato",index:2},
+  {title:"Where To Buy Potato",index:3}
+]
+
+export const QuestionsData = [
+  "Questions Regarding Potato","Fruits"
+]
