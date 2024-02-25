@@ -1,7 +1,3 @@
-
-/* 
-Footer
-*/
 .dark .footer {
     .divider {
       @apply text-gray-700;

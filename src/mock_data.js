@@ -61,3 +61,13 @@ export const MenuDetailMenuTypes = [
   { type: "icon-only", icon: "la la-th-large", label: "Icon Only" },
   { type: "wide", icon: "la la-arrows-alt-h", label: "Wide" },
 ];
+
+export const DropdownContent = () =>(
+  <div className="dropdown-menu">
+    <a href="#no-link">Dropdown Action</a>
+    <a href="#no-link">Link</a>
+    <hr />
+    <h6 className="uppercase">Header</h6>
+    <a href="#no-link">Something Else</a>
+  </div>
+)

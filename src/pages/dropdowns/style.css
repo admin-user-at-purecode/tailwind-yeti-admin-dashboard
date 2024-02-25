@@ -1,0 +1,72 @@
+.workspace {
+    @apply relative flex flex-auto flex-col mt-20 px-5 pt-5;
+  
+    &_with-sidebar {
+      @apply overflow-y-auto;
+      height: calc(100vh - 5rem);
+    }
+  }
+  
+  @media screen(md) {
+    .workspace {
+      @apply px-10 pt-10;
+    }
+  }
+
+.dropdown-menu {
+    @apply hidden p-5;
+  
+    a,
+    button {
+      @apply block mb-2 text-normal;
+  
+      &:hover {
+        @apply text-primary;
+      }
+  
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+  
+    h6 {
+      @apply mb-2 text-muted;
+    }
+  
+    hr {
+      @apply mb-2 border-divider;
+    }
+  }
+
+  .dark .btn-group {
+    .btn {
+      + .btn:not(.btn_outlined) {
+        @apply border-l-gray-900;
+      }
+    }
+  }
+  
+  .btn-group {
+    @apply inline-flex;
+  
+    .btn {
+      + .btn:not(.btn_outlined) {
+        @apply border-l-white;
+      }
+  
+      &:not(:first-of-type) {
+        @apply rounded-tl-none rounded-bl-none;
+      }
+  
+      &:not(:last-of-type) {
+        @apply rounded-tr-none rounded-br-none;
+      }
+    }
+  
+    .btn_outlined {
+      + .btn {
+        @apply border-l-0;
+      }
+    }
+  }
+  

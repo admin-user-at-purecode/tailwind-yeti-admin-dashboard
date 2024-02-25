@@ -6,20 +6,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Yantramanav:400,700&display=swap");
-
-/* Tippy.js */
 @import "tippy.js/dist/tippy.css";
 @import "tippy.js/themes/light-border.css";
 @import "tippy.js/animations/scale.css";
 @import "tippy.js/animations/shift-toward-extreme.css";
-
-/* Animate.css */
 @import "animate.css/animate.css";
-
-/* Glide.js */
 @import "@glidejs/glide/dist/css/glide.core.css";
-
-/* Main */
 @import "tailwindcss/base.css";
 @import "css/base.css";
 @import "tailwindcss/components.css";
@@ -27,9 +19,15 @@
 @import "css/sections.css";
 @import "components/footer/style.css";
 @import "tailwindcss/utilities.css";
+@import "pages/dropdowns/style.css";
+@import "components/breadcrumb/style.css";
+@import "components/button/style.css";
+@import "components/card/style.css";
+@import "components/footer/style.css";
+
+
 
 :root {
-  /* Primary */
   --color-primary: theme("skin.sky.DEFAULT");
   --color-primary-50: theme("skin.sky.50");
   --color-primary-100: theme("skin.sky.100");
@@ -43,7 +41,6 @@
   --color-primary-900: theme("skin.sky.900");
   --color-primary-950: theme("skin.sky.950");
 
-  /* Gray */
   --color-gray-50: theme("skin.gray.50");
   --color-gray-100: theme("skin.gray.100");
   --color-gray-200: theme("skin.gray.200");
@@ -56,7 +53,6 @@
   --color-gray-900: theme("skin.gray.900");
   --color-gray-950: theme("skin.gray.950");
 
-  /* Secondary */
   --color-secondary: theme("skin.secondary.DEFAULT");
 
   --color-text-normal: var(--color-gray-600);
@@ -72,11 +68,9 @@
   --color-foreground: theme("skin.white");
   --color-input: theme("skin.white");
 
-  /* Fonts */
   --font-body: "Nunito Sans";
   --font-heading: "Nunito";
 
-  /* FullCalendar */
   --fc-border-color: rgb(var(--color-border));
 
   --fc-button-text-color: rgb(var(--color-text-component));
@@ -92,9 +86,7 @@
   --fc-event-text-color: rgb(var(--color-text-component));
 }
 
-/*
-Top Bar
-*/
+
 .top-bar {
   @apply fixed z-30 top-0 flex items-center w-full h-20 px-4 bg-foreground shadow;
 
