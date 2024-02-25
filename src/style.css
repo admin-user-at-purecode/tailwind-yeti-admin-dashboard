@@ -26,6 +26,10 @@
 @import "css/components.css";
 @import "css/sections.css";
 @import "components/footer/style.css";
+@import "components/toasts/style.css";
+@import "components/breadcrumb/style.css";
+@import "components/button/style.css";
+@import 'pages/componentToast/style.css';
 @import "tailwindcss/utilities.css";
 
 :root {
