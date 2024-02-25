@@ -22,10 +22,13 @@
 /* Main */
 @import "tailwindcss/base.css";
 @import "css/base.css";
+@import "css/sections.css";
 @import "tailwindcss/components.css";
 @import "css/components.css";
-@import "css/sections.css";
+@import "pages/componentsTabs/style.css";
 @import "components/footer/style.css";
+@import "components/card/style.css";
+@import "components/breadcrumb/style.css";
 @import "tailwindcss/utilities.css";
 
 :root {
