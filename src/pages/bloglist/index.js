@@ -271,6 +271,7 @@ const BlogList = () => {
           </div>
         </div>
       ) : null}
+      <Footer />
     </main>
   );
 };
