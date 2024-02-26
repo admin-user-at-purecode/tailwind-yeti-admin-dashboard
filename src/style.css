@@ -6,30 +6,22 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Yantramanav:400,700&display=swap");
-
-/* Tippy.js */
 @import "tippy.js/dist/tippy.css";
 @import "tippy.js/themes/light-border.css";
 @import "tippy.js/animations/scale.css";
 @import "tippy.js/animations/shift-toward-extreme.css";
-
-/* Animate.css */
 @import "animate.css/animate.css";
-
-/* Glide.js */
 @import "@glidejs/glide/dist/css/glide.core.css";
-
-/* Main */
 @import "tailwindcss/base.css";
 @import "css/base.css";
 @import "tailwindcss/components.css";
 @import "css/components.css";
 @import "css/sections.css";
-@import "components/footer/style.css";
+@import "components/button/style.css";
+@import "components/card/style.css";
 @import "tailwindcss/utilities.css";
 
 :root {
-  /* Primary */
   --color-primary: theme("skin.sky.DEFAULT");
   --color-primary-50: theme("skin.sky.50");
   --color-primary-100: theme("skin.sky.100");
