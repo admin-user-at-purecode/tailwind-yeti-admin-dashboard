@@ -1,0 +1,144 @@
+.workspace {
+  @apply relative flex flex-auto flex-col mt-20 px-5 pt-5;
+
+  &_with-sidebar {
+    @apply overflow-y-auto;
+    height: calc(100vh - 5rem);
+  }
+}
+
+@media screen(md) {
+  .workspace {
+    @apply px-10 pt-10;
+  }
+}
+
+.dark .table {
+  tbody {
+    tr {
+      &.row_selected {
+        @apply bg-primary bg-opacity-5;
+
+        &:hover {
+          @apply bg-primary bg-opacity-5;
+        }
+      }
+    }
+  }
+
+  &_hoverable {
+    tbody {
+      tr {
+        &:hover {
+          @apply bg-primary bg-opacity-5;
+        }
+      }
+    }
+  }
+}
+
+.table {
+  thead {
+    @apply font-heading text-primary;
+
+    th {
+      @apply p-2;
+    }
+  }
+
+  tbody {
+    tr {
+      @apply border-t border-divider;
+
+      th {
+        @apply p-2;
+      }
+
+      td {
+        @apply px-2 py-4;
+      }
+
+      &.row_selected {
+        @apply bg-primary-50;
+
+        &:hover {
+          @apply bg-primary-50;
+        }
+      }
+    }
+  }
+
+  &_striped {
+    tbody {
+      tr {
+        &:nth-of-type(odd) {
+          @apply bg-background;
+        }
+      }
+    }
+  }
+
+  &_bordered {
+    @apply border border-divider;
+
+    thead {
+      th {
+        @apply border border-divider;
+      }
+    }
+
+    tbody {
+      td {
+        @apply border border-divider;
+      }
+    }
+  }
+
+  &_borderless {
+    tbody {
+      tr {
+        @apply border-none;
+      }
+    }
+  }
+
+  &_hoverable {
+    tbody {
+      tr {
+        &:hover {
+          @apply bg-primary-50;
+        }
+      }
+    }
+  }
+
+  &_list {
+    th,
+    td {
+      &:first-child {
+        @apply pl-0;
+      }
+
+      &:last-child {
+        @apply pr-0;
+      }
+    }
+  }
+}
+
+[dir="rtl"] {
+  .table {
+    &_list {
+      th,
+      td {
+        &:first-child {
+          @apply pl-2 pr-0;
+        }
+
+        &:last-child {
+          @apply pr-2 pl-0;
+        }
+      }
+    }
+  }
+}
