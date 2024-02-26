@@ -3,10 +3,10 @@ import React from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import Button from "components/Button";
-import Dropdown from "components/Dropdown";
+import Button from "components/button";
+import Dropdown from "components/dropdown";
 
-import usePagination, { dots } from "utilities/hooks/usePagination";
+import usePagination, { dots } from "hooks/usePagination";
 
 const Pagination = (props) => {
   const {
