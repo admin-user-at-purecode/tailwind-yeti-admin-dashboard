@@ -4,9 +4,9 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import moment from "moment";
 
-import Badge from "components/Badge";
-import Checkbox from "components/form/Checkbox";
-import Dropdown from "components/Dropdown";
+import Badge from "components/badge";
+import Checkbox from "components/checkbox";
+import Dropdown from "components/dropdown";
 
 const CardRow = (props) => {
   const {
