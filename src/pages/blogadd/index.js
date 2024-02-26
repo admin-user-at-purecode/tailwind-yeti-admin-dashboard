@@ -14,11 +14,11 @@ import Tabs, {
   TabsNavigation,
   TabsNavigationItem,
 } from "components/tabs";
+import { blogData, blogData2 } from "mock_data";
 
 const BlogAdd = () => {
   return (
     <main className="workspace">
-      {/* Breadcrumb */}
       <Breadcrumb title="Blog">
         <BreadcrumbItem link="#no-link">Pages</BreadcrumbItem>
         <BreadcrumbItem link="#no-link">Blog</BreadcrumbItem>
@@ -26,38 +26,29 @@ const BlogAdd = () => {
       </Breadcrumb>
 
       <div className="grid lg:grid-cols-4 gap-5">
-        {/* Content */}
         <div className="lg:col-span-2 xl:col-span-3">
           <div className="card p-5">
-            <div className="mb-5 xl:w-1/2">
-              <Label className="block mb-2" htmlFor="title">
-                Title
-              </Label>
-              <Input id="title" />
-            </div>
-            <div className="mb-5 xl:w-1/2">
-              <Label className="block mb-2" htmlFor="slug">
-                Slug
-              </Label>
-              <Input id="slug" />
-            </div>
-            <div className="mb-5">
-              <Label className="block mb-2" htmlFor="content">
-                Content
-              </Label>
-              <Textarea id="content" rows="16" />
-            </div>
-            <div className="xl:w-1/2">
-              <Label className="block mb-2" htmlFor="excerpt">
-                Content
-              </Label>
-              <Textarea id="excerpt" rows="8" />
-            </div>
+            {blogData.map((value) => (
+              <div className="mb-5 xl:w-1/2">
+                <Label className="block mb-2" htmlFor={value.forVal}>
+                  {value.title}
+                </Label>
+                <Input id={value.forVal} />
+              </div>
+            ))}
+
+            {blogData2.map((value) => (
+              <div className="mb-5 xl:w-1/2">
+                <Label className="block mb-2" htmlFor={value.forVal}>
+                  {value.title}
+                </Label>
+                <Textarea id={value.forVal} rows={value.rows} />
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="flex flex-col gap-y-5 lg:col-span-2 xl:col-span-1">
-          {/* Publish */}
           <div className="card p-5 flex flex-col gap-y-5">
             <h3>Publish</h3>
             <div className="flex flex-col gap-y-5">
@@ -100,7 +91,6 @@ const BlogAdd = () => {
             </div>
           </div>
 
-          {/* Categories */}
           <div className="card p-5">
             <h3>Categories</h3>
             <Tabs activeIndex={1} className="mt-5">
@@ -113,25 +103,21 @@ const BlogAdd = () => {
                 </TabsNavigationItem>
               </TabsNavigation>
               <TabsContent>
-                <TabsContentItem index={1} className="flex flex-col gap-y-2">
+                {[1,2].map(val => (
+                  <TabsContentItem index={val} className="flex flex-col gap-y-2">
                   <Checkbox label="Uncategorized" defaultChecked />
                   <Checkbox label="Recent" />
                   <Checkbox label="Featured" />
                   <Checkbox label="Trending" />
                   <Checkbox label="International" />
                 </TabsContentItem>
-                <TabsContentItem index={2} className="flex flex-col gap-y-2">
-                  <Checkbox label="Uncategorized" defaultChecked />
-                  <Checkbox label="Recent" />
-                  <Checkbox label="Featured" />
-                  <Checkbox label="Trending" />
-                  <Checkbox label="International" />
-                </TabsContentItem>
+                ))}
+                
+                
               </TabsContent>
             </Tabs>
           </div>
 
-          {/* Tags */}
           <div className="card p-5">
             <h3>Tags</h3>
             <div className="mt-5">
@@ -154,7 +140,6 @@ const BlogAdd = () => {
             </div>
           </div>
 
-          {/* Featured Image */}
           <div className="card p-5">
             <h3>Featured Image</h3>
             <Button color="secondary" outlined className="mt-5 uppercase">

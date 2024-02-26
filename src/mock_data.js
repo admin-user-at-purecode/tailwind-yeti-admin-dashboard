@@ -61,3 +61,13 @@ export const MenuDetailMenuTypes = [
   { type: "icon-only", icon: "la la-th-large", label: "Icon Only" },
   { type: "wide", icon: "la la-arrows-alt-h", label: "Wide" },
 ];
+
+export const blogData = [
+  {title: "Title", forVal: "title"},
+  {title: "Slug", forVal: "slug"},
+]
+
+export const blogData2 = [
+  {title: "Content", forVal: "content", rows: "16"},
+  {title: "Content", forVal: "excerpt", rows: "8"},
+]
