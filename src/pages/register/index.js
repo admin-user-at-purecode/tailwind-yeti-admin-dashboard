@@ -53,18 +53,15 @@ const AuthRegister = () => {
             <h4 className="uppercase">Let's Roll</h4>
           </div>
           <form className="card mt-5 p-5 md:p-10">
-            <div className="mb-5">
+            {['Name', 'Email'].map((value) => (
+              <div className="mb-5">
               <Label className="block mb-2" htmlFor="name">
-                Name
+                {value}
               </Label>
               <Input id="name" placeholder="John Doe" />
             </div>
-            <div className="mb-5">
-              <Label className="block mb-2" htmlFor="email">
-                Email
-              </Label>
-              <Input id="email" placeholder="example@example.com" />
-            </div>
+            ))}
+          
             <div className="mb-5">
               <Label className="block mb-2" htmlFor="password">
                 Password
