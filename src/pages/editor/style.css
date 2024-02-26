@@ -14,3 +14,14 @@
     @apply px-10 pt-10;
   }
 }
+
+/*
+Editors
+*/
+.tox-notifications-container {
+  @apply hidden;
+}
+
+.ck-editor__editable_inline {
+  min-height: 360px;
+}

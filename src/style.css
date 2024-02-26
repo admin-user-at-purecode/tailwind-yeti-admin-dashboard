@@ -32,21 +32,6 @@
 
 @import "components/breadcrumb/style.css";
 @import "components/card/style.css";
-@import "components/dropdown/style.css"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 :root {
   /* Primary */
   --color-primary: theme("skin.sky.DEFAULT");
