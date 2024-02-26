@@ -1,0 +1,66 @@
+.workspace {
+  @apply relative flex flex-auto flex-col mt-20 px-5 pt-5;
+
+  &_with-sidebar {
+    @apply overflow-y-auto;
+    height: calc(100vh - 5rem);
+  }
+}
+
+@media screen(md) {
+  .workspace {
+    @apply px-10 pt-10;
+  }
+}
+
+.accordion {
+  .accordion-header {
+    @apply flex items-center cursor-pointer;
+
+    .collapsible-indicator {
+      @apply ml-auto text-2xl leading-none;
+      @apply transition-all duration-200 ease-linear;
+    }
+
+    &:hover {
+      @apply text-primary;
+    }
+
+    &.active {
+      @apply text-primary;
+
+      .collapsible-indicator {
+        @apply transform -rotate-180;
+      }
+    }
+  }
+}
+
+[dir="rtl"] {
+  .accordion {
+    .accordion-header {
+      .collapsible-indicator {
+        @apply ml-0 mr-auto;
+      }
+    }
+  }
+}
+
+.dark .backdrop {
+  &.active {
+    @apply opacity-30;
+  }
+}
+
+.backdrop {
+  @apply fixed top-0 right-0 bottom-0 left-0 bg-black opacity-0 z-40;
+  @apply transition-opacity duration-200 ease-linear;
+
+  &.active {
+    @apply opacity-10;
+  }
+
+  &_workspace {
+    @apply z-10;
+  }
+}

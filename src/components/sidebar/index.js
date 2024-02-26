@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 import classNames from "classnames";
 
-import Backdrop from "components/Backdrop";
+import Backdrop from "components/backdrop";
 
-import useWindowSize from "utilities/hooks/useWindowSize";
+import useWindowSize from "hooks/useWindowSize";
 
 const Sidebar = (props) => {
   const { children } = props;
