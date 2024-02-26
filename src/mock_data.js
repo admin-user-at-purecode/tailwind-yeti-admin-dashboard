@@ -61,3 +61,22 @@ export const MenuDetailMenuTypes = [
   { type: "icon-only", icon: "la la-th-large", label: "Icon Only" },
   { type: "wide", icon: "la la-arrows-alt-h", label: "Wide" },
 ];
+
+export const topBarData = [
+  { text: "Settings", iconClass: "la la-cog" },
+  { text: "Users", iconClass: "la la-users" },
+  { text: "Docs", iconClass: "la la-book" },
+  { text: "Shop", iconClass: "la la-dollar" },
+];
+
+export const tabLeftData = [
+  {title: "Heading One", text: "Today"},
+  {title: "Heading Two", text: "Yesterday"},
+  {title: "Heading Three", text: "Last Week"},
+]
+
+export const tabProfileDetails = [
+  {title: "View Profile", iconClass: "la-user-circle" },
+  {title: "Change Password", iconClass: "la-key" },
+  {title: "Logout", iconClass: "la-power-off" },
+]

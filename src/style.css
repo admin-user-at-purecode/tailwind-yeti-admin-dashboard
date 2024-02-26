@@ -26,6 +26,7 @@
 @import "css/components.css";
 @import "css/sections.css";
 @import "components/footer/style.css";
+@import "components/TopBar/style.css";
 @import "tailwindcss/utilities.css";
 
 :root {
@@ -140,3 +141,5 @@ Top Bar
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+  

@@ -1,0 +1,143 @@
+/*
+Buttons
+*/
+.btn {
+    @apply inline-flex items-center rounded-full px-5 py-2 border border-transparent font-bold;
+    @apply text-component !important;
+    @apply transition-all duration-200 ease-linear;
+  
+    &:hover {
+      @apply text-component;
+    }
+  
+    &:disabled {
+      @apply opacity-50;
+    }
+  
+    &_primary {
+      @apply bg-primary;
+  
+      &:hover:not([disabled]) {
+        @apply bg-primary-700;
+      }
+    }
+  
+    &_secondary {
+      @apply bg-secondary;
+  
+      &:hover:not([disabled]) {
+        @apply bg-opacity-75;
+      }
+    }
+  
+    &_success {
+      @apply bg-success;
+  
+      &:hover:not([disabled]) {
+        @apply bg-opacity-75;
+      }
+    }
+  
+    &_danger {
+      @apply bg-danger;
+  
+      &:hover:not([disabled]) {
+        @apply bg-opacity-75;
+      }
+    }
+  
+    &_warning {
+      @apply bg-warning;
+  
+      &:hover:not([disabled]) {
+        @apply bg-opacity-75;
+      }
+    }
+  
+    &_info {
+      @apply bg-info;
+  
+      &:hover:not([disabled]) {
+        @apply bg-opacity-75;
+      }
+    }
+  
+    &_outlined {
+      @apply bg-transparent;
+  
+      &:hover:not([disabled]) {
+        @apply bg-transparent;
+      }
+  
+      &.btn {
+        &_primary {
+          @apply border-primary;
+          @apply text-primary !important;
+  
+          &:hover:not([disabled]) {
+            @apply border-primary-700;
+            @apply text-primary-700 !important;
+          }
+        }
+  
+        &_secondary {
+          @apply border-secondary;
+          @apply text-secondary !important;
+  
+          &:hover:not([disabled]) {
+            @apply border-opacity-75;
+            @apply text-opacity-75 !important;
+          }
+        }
+  
+        &_success {
+          @apply border-success;
+          @apply text-success !important;
+  
+          &:hover:not([disabled]) {
+            @apply border-opacity-75;
+            @apply text-opacity-75 !important;
+          }
+        }
+  
+        &_danger {
+          @apply border-danger;
+          @apply text-danger !important;
+  
+          &:hover:not([disabled]) {
+            @apply border-opacity-75;
+            @apply text-opacity-75 !important;
+          }
+        }
+  
+        &_warning {
+          @apply border-warning;
+          @apply text-warning !important;
+  
+          &:hover:not([disabled]) {
+            @apply border-opacity-75;
+            @apply text-opacity-75 !important;
+          }
+        }
+  
+        &_info {
+          @apply border-info;
+          @apply text-info !important;
+  
+          &:hover:not([disabled]) {
+            @apply border-opacity-75;
+            @apply text-opacity-75 !important;
+          }
+        }
+      }
+    }
+  
+    &-icon {
+      @apply w-8 h-8 p-0 justify-center text-xl leading-none;
+  
+      &_large {
+        @apply w-10 h-10;
+      }
+    }
+  }
+  

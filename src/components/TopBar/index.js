@@ -10,6 +10,7 @@ import Tooltip from "../tooltip";
 import Dropdown from "../dropdown";
 import Avatar from "../avatar";
 import Switch from "../switch";
+import { tabLeftData, tabProfileDetails, topBarData } from "mock_data";
 
 const TopBar = () => {
   const dispatch = useDispatch();
@@ -21,16 +22,13 @@ const TopBar = () => {
 
   return (
     <header className="top-bar">
-      {/* Menu Toggler */}
       <button
         className="menu-toggler la la-bars"
         onClick={() => dispatch(toggleMenu(!menuBarVisible))}
       ></button>
 
-      {/* Brand */}
       <span className="brand">Yeti</span>
 
-      {/* Search */}
       <form className="hidden md:block ltr:ml-10 rtl:mr-10">
         <label className="form-control-addon-within rounded-full">
           <input className="form-control border-none" placeholder="Search" />
@@ -38,18 +36,13 @@ const TopBar = () => {
         </label>
       </form>
 
-      {/* Right */}
       <div className="flex items-center ltr:ml-auto rtl:mr-auto">
-        {/* Dark Mode */}
         <Tooltip content="Toggle Dark Mode">
           <Switch
             outlined
-            // checked={false}
-            // onChange={() => toggleDarkMode()}
           />
         </Tooltip>
 
-        {/* Fullscreen */}
         <Tooltip content="Fullscreen">
           <button
             className={classNames(
@@ -63,7 +56,6 @@ const TopBar = () => {
           ></button>
         </Tooltip>
 
-        {/* Apps */}
         <div className="self-stretch">
           <Dropdown
             arrow={true}
@@ -71,36 +63,17 @@ const TopBar = () => {
             content={
               <div className="p-5 text-center">
                 <div className="flex justify-around">
-                  <a
-                    href="#no-link"
-                    className="p-5 text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary"
-                  >
-                    <span className="block la la-cog text-5xl leading-none"></span>
-                    <span>Settings</span>
-                  </a>
-                  <a
-                    href="#no-link"
-                    className="p-5 text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary"
-                  >
-                    <span className="block la la-users text-5xl leading-none"></span>
-                    <span>Users</span>
-                  </a>
-                </div>
-                <div className="flex justify-around">
-                  <a
-                    href="#no-link"
-                    className="p-5 text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary"
-                  >
-                    <span className="block la la-book text-5xl leading-none"></span>
-                    <span>Docs</span>
-                  </a>
-                  <a
-                    href="#no-link"
-                    className="p-5 text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary"
-                  >
-                    <span className="block la la-dollar text-5xl leading-none"></span>
-                    <span>Shop</span>
-                  </a>
+                  {topBarData.map((value) => (
+                    <a
+                      href="#no-link"
+                      className="p-5 text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary"
+                    >
+                      <span
+                        className={`block ${value.iconClass} text-5xl leading-none`}
+                      ></span>
+                      <span>{value.text}</span>
+                    </a>
+                  ))}
                 </div>
               </div>
             }
@@ -109,7 +82,6 @@ const TopBar = () => {
           </Dropdown>
         </div>
 
-        {/* Notifications */}
         <div className="self-stretch">
           <Dropdown
             arrow={true}
@@ -122,29 +94,18 @@ const TopBar = () => {
                   </button>
                 </div>
                 <hr />
-                <div className="p-5 hover:bg-primary-50 dark:hover:bg-primary dark:hover:bg-opacity-5">
-                  <a href="#no-link">
-                    <h6 className="uppercase">Heading One</h6>
-                  </a>
-                  <p>Lorem ipsum dolor, sit amet consectetur.</p>
-                  <small>Today</small>
-                </div>
-                <hr />
-                <div className="p-5 hover:bg-primary-50 dark:hover:bg-primary dark:hover:bg-opacity-5">
-                  <a href="#no-link">
-                    <h6 className="uppercase">Heading Two</h6>
-                  </a>
-                  <p>Mollitia sequi dolor architecto aut deserunt.</p>
-                  <small>Yesterday</small>
-                </div>
-                <hr />
-                <div className="p-5 hover:bg-primary-50 dark:hover:bg-primary dark:hover:bg-opacity-5">
-                  <a href="#no-link">
-                    <h6 className="uppercase">Heading Three</h6>
-                  </a>
-                  <p>Nobis reprehenderit sed quos deserunt</p>
-                  <small>Last Week</small>
-                </div>
+                {tabLeftData.map((value) => (
+                  <>
+                    <div className="p-5 hover:bg-primary-50 dark:hover:bg-primary dark:hover:bg-opacity-5">
+                      <a href="#no-link">
+                        <h6 className="uppercase">{value.title}</h6>
+                      </a>
+                      <p>Lorem ipsum dolor, sit amet consectetur.</p>
+                      <small>{value.text}</small>
+                    </div>
+                    <hr />
+                  </>
+                ))}
               </div>
             }
           >
@@ -156,7 +117,6 @@ const TopBar = () => {
           </Dropdown>
         </div>
 
-        {/* User Menu */}
         <div>
           <Dropdown
             arrow={true}
@@ -168,30 +128,15 @@ const TopBar = () => {
                 </div>
                 <hr />
                 <div className="p-5">
-                  <a
+                  {tabProfileDetails.map((value) => (
+                    <a
                     href="#no-link"
-                    className="flex items-center text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary"
+                    className="pb-5 flex items-center text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary"
                   >
-                    <span className="la la-user-circle text-2xl leading-none ltr:mr-2 rtl:ml-2"></span>
-                    View Profile
+                    <span className={`la ${value.iconClass} text-2xl leading-none ltr:mr-2 rtl:ml-2`}></span>
+                    {value.title}
                   </a>
-                  <a
-                    href="#no-link"
-                    className="flex items-center text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary mt-5"
-                  >
-                    <span className="la la-key text-2xl leading-none ltr:mr-2 rtl:ml-2"></span>
-                    Change Password
-                  </a>
-                </div>
-                <hr />
-                <div className="p-5">
-                  <a
-                    href="#no-link"
-                    className="flex items-center text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary"
-                  >
-                    <span className="la la-power-off text-2xl leading-none ltr:mr-2 rtl:ml-2"></span>
-                    Logout
-                  </a>
+                  ))}
                 </div>
               </div>
             }
