@@ -1,0 +1,36 @@
+/* 
+Workspace
+*/
+.workspace {
+    @apply relative flex flex-auto flex-col mt-20 px-5 pt-5;
+  
+    &_with-sidebar {
+      @apply overflow-y-auto;
+      height: calc(100vh - 5rem);
+    }
+  }
+  
+  @media screen(md) {
+    .workspace {
+      @apply px-10 pt-10;
+    }
+  }
+  
+  /*
+Dropzone
+*/
+.dropzone {
+  @apply flex items-center justify-center p-5 h-40 border-2 border-dotted border-border rounded-xl;
+
+  h3 {
+    @apply text-center;
+  }
+
+  &:hover {
+    @apply border-primary;
+
+    h3 {
+      @apply text-primary;
+    }
+  }
+}
