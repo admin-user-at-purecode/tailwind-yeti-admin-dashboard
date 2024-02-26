@@ -34,3 +34,32 @@ Dropzone
     }
   }
 }
+
+
+/*
+Dropdown
+*/
+.dropdown-menu {
+  @apply hidden p-5;
+
+  a,
+  button {
+    @apply block mb-2 text-normal;
+
+    &:hover {
+      @apply text-primary;
+    }
+
+    &:last-child {
+      @apply mb-0;
+    }
+  }
+
+  h6 {
+    @apply mb-2 text-muted;
+  }
+
+  hr {
+    @apply mb-2 border-divider;
+  }
+}
