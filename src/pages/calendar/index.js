@@ -65,8 +65,8 @@ const ExtrasFullCalandar = () => {
   ];
 
   return (
-    <main className="workspace">
-      <Breadcrumb title="FullCalendar">
+    <main className="workspace main">
+      <Breadcrumb title="FullCalendar" className="Breadcrumb">
         <BreadcrumbItem link="#no-link">UI</BreadcrumbItem>
         <BreadcrumbItem link="#no-link">Extras</BreadcrumbItem>
         <BreadcrumbItem>FullCalendar</BreadcrumbItem>
@@ -74,6 +74,7 @@ const ExtrasFullCalandar = () => {
 
       <div className="card p-5">
         <FullCalendar
+          className="FullCalendar"
           plugins={[dayGridPlugin, timeGridPlugin]}
           initialView="dayGridMonth"
           headerToolbar={{
