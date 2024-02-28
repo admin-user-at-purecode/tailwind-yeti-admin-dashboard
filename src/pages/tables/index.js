@@ -5,8 +5,8 @@ import { TableHeadings, tableData } from "mock_data";
 
 const ComponentsTables = () => {
   return (
-    <main className="workspace">
-      <Breadcrumb title="Tables">
+    <main className="workspace main">
+      <Breadcrumb title="Tables" className="Breadcrumb">
         <BreadcrumbItem link="#no-link">UI</BreadcrumbItem>
         <BreadcrumbItem link="#no-link">Components</BreadcrumbItem>
         <BreadcrumbItem>Tables</BreadcrumbItem>
@@ -19,16 +19,19 @@ const ComponentsTables = () => {
             <table className="table w-full mt-3">
               <thead>
                 <tr>
-                  {TableHeadings.map((heading) => (
-                    <th className="ltr:text-left rtl:text-right uppercase">
+                  {TableHeadings.map((heading, index) => (
+                    <th
+                      className="ltr:text-left rtl:text-right uppercase"
+                      key={index}
+                    >
                       {heading}
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {tableData.map((val) => (
-                  <tr>
+                {tableData.map((val, index) => (
+                  <tr key={index}>
                     <td>{val}</td>
                     <td>John</td>
                     <td>Doe</td>
@@ -43,16 +46,19 @@ const ComponentsTables = () => {
             <table className="table table_bordered w-full mt-3">
               <thead>
                 <tr>
-                  {TableHeadings.map((heading) => (
-                    <th className="ltr:text-left rtl:text-right uppercase">
+                  {TableHeadings.map((heading, index) => (
+                    <th
+                      key={index}
+                      className="ltr:text-left rtl:text-right uppercase"
+                    >
                       {heading}
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {tableData.map((val) => (
-                  <tr>
+                {tableData.map((val, index) => (
+                  <tr key={index}>
                     <td>{val}</td>
                     <td>John</td>
                     <td>Doe</td>
@@ -67,16 +73,19 @@ const ComponentsTables = () => {
             <table className="table table_hoverable w-full mt-3">
               <thead>
                 <tr>
-                  {TableHeadings.map((heading) => (
-                    <th className="ltr:text-left rtl:text-right uppercase">
+                  {TableHeadings.map((heading, index) => (
+                    <th
+                      className="ltr:text-left rtl:text-right uppercase"
+                      key={index}
+                    >
                       {heading}
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {tableData.map((val) => (
-                  <tr>
+                {tableData.map((val, index) => (
+                  <tr key={index}>
                     <td>{val}</td>
                     <td>John</td>
                     <td>Doe</td>
@@ -93,16 +102,19 @@ const ComponentsTables = () => {
             <table className="table table_striped w-full mt-3">
               <thead>
                 <tr>
-                  {TableHeadings.map((heading) => (
-                    <th className="ltr:text-left rtl:text-right uppercase">
+                  {TableHeadings.map((heading, index) => (
+                    <th
+                      className="ltr:text-left rtl:text-right uppercase"
+                      key={index}
+                    >
                       {heading}
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {tableData.map((val) => (
-                  <tr>
+                {tableData.map((val, index) => (
+                  <tr key={index}>
                     <td>{val}</td>
                     <td>John</td>
                     <td>Doe</td>
@@ -117,16 +129,19 @@ const ComponentsTables = () => {
             <table className="table table_borderless w-full mt-3">
               <thead>
                 <tr>
-                  {TableHeadings.map((heading) => (
-                    <th className="ltr:text-left rtl:text-right uppercase">
+                  {TableHeadings.map((heading, index) => (
+                    <th
+                      className="ltr:text-left rtl:text-right uppercase"
+                      key={index}
+                    >
                       {heading}
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {tableData.map((val) => (
-                  <tr>
+                {tableData.map((val, index) => (
+                  <tr key={index}>
                     <td>{val}</td>
                     <td>John</td>
                     <td>Doe</td>
