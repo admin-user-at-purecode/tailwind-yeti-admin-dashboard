@@ -1,10 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-
 import { toggleMenu } from "actions";
-
 import classNames from "classnames";
-
-// import useDarkMode from "hooks/useDarkMode";
 import useFullscreen from "hooks/useFullScreen";
 import Tooltip from "../tooltip";
 import Dropdown from "../dropdown";
@@ -13,44 +9,27 @@ import Switch from "../switch";
 
 const TopBar = () => {
   const dispatch = useDispatch();
-
   const menuBarVisible = useSelector((state) => state.root.menuBarVisible);
-
-  // const [darkMode, toggleDarkMode] = useDarkMode();
   const [isFullscreen, toggleFullscreen] = useFullscreen();
 
   return (
-    <header className="top-bar">
-      {/* Menu Toggler */}
+    <header className="top-bar topBar">
       <button
-        className="menu-toggler la la-bars"
+        className="menu-toggler la la-bars menuButton"
         onClick={() => dispatch(toggleMenu(!menuBarVisible))}
       ></button>
-
-      {/* Brand */}
-      <span className="brand">Yeti</span>
-
-      {/* Search */}
-      <form className="hidden md:block ltr:ml-10 rtl:mr-10">
+      <span className="brand name">Yeti</span>
+      <form className="hidden md:block ltr:ml-10 rtl:mr-10 form">
         <label className="form-control-addon-within rounded-full">
           <input className="form-control border-none" placeholder="Search" />
           <button className="text-gray-300 dark:text-gray-700 text-xl leading-none la la-search ltr:mr-4 rtl:ml-4"></button>
         </label>
       </form>
-
-      {/* Right */}
       <div className="flex items-center ltr:ml-auto rtl:mr-auto">
-        {/* Dark Mode */}
-        <Tooltip content="Toggle Dark Mode">
-          <Switch
-            outlined
-            // checked={false}
-            // onChange={() => toggleDarkMode()}
-          />
+        <Tooltip content="Toggle Dark Mode" className="Tooltip1">
+          <Switch outlined />
         </Tooltip>
-
-        {/* Fullscreen */}
-        <Tooltip content="Fullscreen">
+        <Tooltip content="Fullscreen" className="Tooltip2">
           <button
             className={classNames(
               "hidden lg:inline-block ltr:ml-3 rtl:mr-3 px-2 text-2xl leading-none la",
@@ -62,10 +41,9 @@ const TopBar = () => {
             onClick={toggleFullscreen}
           ></button>
         </Tooltip>
-
-        {/* Apps */}
         <div className="self-stretch">
           <Dropdown
+            className="Dropdown1"
             arrow={true}
             placement="bottom"
             content={
@@ -109,9 +87,9 @@ const TopBar = () => {
           </Dropdown>
         </div>
 
-        {/* Notifications */}
         <div className="self-stretch">
           <Dropdown
+            className="Dropdown2"
             arrow={true}
             content={
               <div>
@@ -155,10 +133,9 @@ const TopBar = () => {
             </button>
           </Dropdown>
         </div>
-
-        {/* User Menu */}
         <div>
           <Dropdown
+            className="Dropdown3"
             arrow={true}
             content={
               <div className="w-64">

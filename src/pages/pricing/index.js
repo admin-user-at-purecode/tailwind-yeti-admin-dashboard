@@ -5,19 +5,19 @@ import { PricingData } from "mock_data";
 
 const PagesPricing = () => {
   return (
-    <main className="workspace">
+    <main className="workspace main">
       <section className="breadcrumb">
-        <Breadcrumb title="Pricing">
+        <Breadcrumb title="Pricing" className="Breadcrumb">
           <BreadcrumbItem link="#no-link">Pages</BreadcrumbItem>
           <BreadcrumbItem>Pricing</BreadcrumbItem>
         </Breadcrumb>
       </section>
 
       <div className="grid lg:grid-cols-3 xl:grid-cols-4 gap-5">
-        {PricingData.map((data) => {
+        {PricingData.map((data,index) => {
           const { title, subtitle } = data;
           return (
-            <div className="card text-center">
+            <div className="card text-center" key={index}>
               <div className="p-5">
                 <h2 className="uppercase">{title}</h2>
                 <h4 className="uppercase mt-2">{subtitle}</h4>
@@ -47,7 +47,6 @@ const PagesPricing = () => {
           );
         })}
       </div>
-
       <Footer />
     </main>
   );
