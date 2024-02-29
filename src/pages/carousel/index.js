@@ -43,8 +43,8 @@ const ExtrasCarousel = () => {
   }, []);
 
   return (
-    <main className="workspace overflow-hidden">
-      <Breadcrumb title="Carousel">
+    <main className="workspace overflow-hidden main">
+      <Breadcrumb title="Carousel" className="Breadcrumb">
         <BreadcrumbItem link="#no-link">UI</BreadcrumbItem>
         <BreadcrumbItem link="#no-link">Extras</BreadcrumbItem>
         <BreadcrumbItem>Carousel</BreadcrumbItem>
@@ -55,10 +55,10 @@ const ExtrasCarousel = () => {
         <div ref={carouselRef} id="carousel-style-1" className="glide mt-5">
           <div className="glide__track" data-glide-el="track">
             <div className="glide__slides">
-              {carouselData.map((data) => {
+              {carouselData.map((data,index) => {
                 const { title, value } = data;
                 return (
-                  <div className="glide__slide">
+                  <div className="glide__slide carouselItem" key={index}>
                     <div className="border border-divider rounded-lg px-4 py-8 text-center">
                       <span className="text-primary text-5xl leading-none la la-sun"></span>
                       <p className="mt-2">{title}</p>
