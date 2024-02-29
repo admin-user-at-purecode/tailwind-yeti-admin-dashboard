@@ -63,9 +63,9 @@ export const MenuDetailMenuTypes = [
 ];
 
 export const AccordionData = [
-  { title: "Who Created Potato", index: 1 },
-  { title: "We Want Potato", index: 2 },
-  { title: "Where To Buy Potato", index: 3 },
+  { title: "Who Created Potato", i: 1 },
+  { title: "We Want Potato", i: 2 },
+  { title: "Where To Buy Potato", i: 3 },
 ];
 
 export const QuestionsData = ["Questions Regarding Potato", "Fruits"];

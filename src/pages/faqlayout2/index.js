@@ -1,7 +1,5 @@
-import { useState } from "react";
-
+import { Fragment, useState } from "react";
 import Footer from "components/footer";
-
 import { Accordion, AccordionItem } from "components/collapse";
 import Breadcrumb, { BreadcrumbItem } from "components/breadcrumb";
 import Sidebar from "components/sidebar";
@@ -13,27 +11,28 @@ const PagesFAQsLayout2 = () => {
 
   return (
     <>
-      <main className="workspace workspace_with-sidebar">
-        <Breadcrumb title="FAQs">
+      <main className="workspace workspace_with-sidebar main">
+        <Breadcrumb title="FAQs" className="Breadcrumb">
           <BreadcrumbItem link="#no-link">Pages</BreadcrumbItem>
           <BreadcrumbItem link="#no-link">FAQs</BreadcrumbItem>
           <BreadcrumbItem>Layout 2</BreadcrumbItem>
         </Breadcrumb>
 
         <div className="flex flex-col gap-y-5">
-          {QuestionsData.map((question) => (
-            <div className="card p-5">
+          {QuestionsData.map((question, index) => (
+            <div className="card p-5" key={index}>
               <h3>{question}</h3>
-              <Accordion>
-                {AccordionData.map((data) => {
-                  const { title, index } = data;
+              <Accordion className="Accordion">
+                {AccordionData.map((data, index) => {
+                  const { title, i } = data;
                   return (
-                    <>
+                    <Fragment key={index}>
                       <AccordionItem
+                      className="AccordionItem"
                         activeIndex={
                           question !== "Fruits" ? activeIndex1 : activeIndex2
                         }
-                        index={index}
+                        index={i}
                         title={title}
                         onToggle={
                           question !== "Fruits"
@@ -41,10 +40,12 @@ const PagesFAQsLayout2 = () => {
                             : setActiveIndex2
                         }
                       >
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam iure rem sed dicta ut a perspiciatis temporibus!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Totam iure rem sed dicta ut a perspiciatis
+                        temporibus!
                       </AccordionItem>
                       {index !== 3 && <hr />}
-                    </>
+                    </Fragment>
                   );
                 })}
               </Accordion>
@@ -54,7 +55,7 @@ const PagesFAQsLayout2 = () => {
         <Footer />
       </main>
 
-      <Sidebar>
+      <Sidebar className="Sidebar">
         <div className="overflow-y-auto">
           <h2 className="p-5">Categories</h2>
           <hr />
