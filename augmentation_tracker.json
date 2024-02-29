@@ -9,39 +9,91 @@
     "component_names":    
     [
         "topBar",
-        "MenuBar",
-        "footer"
+        "name",
+        "Tooltip1",
+        "Tooltip2",
+        "anchorElement",
+        "container",
+        "form",
+        "label1",
+        "input1",
+        "label2",
+        "input2",
+        "anchorElement2",
+        "button"
     ],
     "component_information":  
     {
-        "topBar": 1,
-        "MenuBar": 
-        {
-            "count": 1,
-            "location": "left of the page, sticky",
-            "description": "A container with sub-menus and avatar",
-            "children":
-            {
-                "Avatar": {
-                    "count": 1,
-                    "location": "top of the MenuBar",
-                    "description": "Avatar Icon with username"
+        "topBar": {
+            "count":1,
+            "location":"on the top of the page, fixed on the top",
+            "description":"all components inside the top bar are flexed",
+            "children":{
+                "name":{
+                    "count":1,
+                    "location":"left side of the topBar",
+                    "description":"spam element with text"
                 },
-                "Menu Items": {
+                "anchorElement":{
+                    "count":1,
+                    "location":"right side of the topBar",
+                    "description":"it having of href value"
+                },
+                "Tooltip2": {
                     "count": 1,
-                    "location": "Just below Avatar seperated by horizontal line",
-                    "description": "List of menu items containing sub-menu of their own", 
-                    "children":
-                    {
-                        "Menu Details": {
-                            "count": 4,
-                            "location": "Below every list item in menuBar, hidden initially ",
-                            "description": "Sub menu items are accordions that are visible when clicked on menu item in menuBar"
+                    "location": "beside the anchorElement",
+                    "description": "it consists of a button with icon when button is clicked it toggle into fullscreen"
+                },
+                "Tooltip1":{
+                    "count":1,
+                    "location":"beside the Tooltip2",
+                    "description":"it consists of Switch"
+                }
+            }
+        },
+        "container": {
+            "count":1,
+            "location":"below the topBar",
+            "description":"it consists of heading,form. all components are align in vertical and center",
+            "children":{
+                "form":{
+                    "count":1,
+                    "location":"center of the container",
+                    "description":"it consists of labels, inputs, anchor element and button",
+                    "children":{
+                        "label1":{
+                            "count":1,
+                            "location":"top of the form",
+                            "description":"it is linked with input1"
+                        },
+                        "input1":{
+                            "count":1,
+                            "location":"below the label1",
+                            "description":"it is a linked with label1 and it is email type"
+                        },
+                        "label2":{
+                            "count":1,
+                            "location":"below the input1",
+                            "description":"it is linked with input2"
+                        },
+                        "input2":{
+                            "count":1,
+                            "location":"below the label2",
+                            "description":"it is a linked with label2 and and it's type is password"
+                        },
+                        "anchorElement2":{
+                            "count":1,
+                            "location":"below the input2",
+                            "description":"it having of href value"
+                        },
+                        "button":{
+                            "count":1,
+                            "location":"beside the anchorElement2",
+                            "description":"it having a text"
                         }
                     }
                 }
-            },
-            "children_orientation_description": "Menu deatils are accordions where all items are in list format"   
+            }
         }
        
     },
