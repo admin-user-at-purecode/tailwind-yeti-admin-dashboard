@@ -12,13 +12,13 @@ const AuthForgotPassword = () => {
 
   return (
     <>
-      <section className="top-bar">
+      <section className="top-bar topBar">
         <span className="brand">Yeti</span>
         <nav className="flex items-center ltr:ml-auto rtl:mr-auto">
-          <Tooltip content="Toggle Dark Mode">
+          <Tooltip content="Toggle Dark Mode" className="Tooltip1">
             <Switch outlined />
           </Tooltip>
-          <Tooltip content="Fullscreen">
+          <Tooltip content="Fullscreen" className="Tooltip2">
             <button
               className={classNames(
                 "hidden lg:inline-block ltr:ml-3 rtl:mr-3 px-2 text-2xl leading-none la",
@@ -32,7 +32,7 @@ const AuthForgotPassword = () => {
           </Tooltip>
           <a
             href="/auth-login"
-            className="btn btn_primary uppercase ltr:ml-5 rtl:mr-5"
+            className="btn btn_primary uppercase ltr:ml-5 rtl:mr-5 anchorElement"
           >
             Login
           </a>
@@ -44,15 +44,19 @@ const AuthForgotPassword = () => {
             <h2 className="uppercase">Forgot Password?</h2>
             <h4 className="uppercase">We'll Email You Soon</h4>
           </div>
-          <form className="card mt-5 p-5 md:p-10">
+          <form className="card mt-5 p-5 md:p-10 form">
             <div className="mb-5">
-              <Label className="block mb-2" htmlFor="email">
+              <Label className="block mb-2 label" htmlFor="email">
                 Email
               </Label>
-              <Input id="email" placeholder="example@example.com" />
+              <Input
+                id="email"
+                placeholder="example@example.com"
+                className="input"
+              />
             </div>
             <div className="flex">
-              <Button className="ltr:ml-auto rtl:mr-auto uppercase">
+              <Button className="ltr:ml-auto rtl:mr-auto uppercase button">
                 Send Reset Link
               </Button>
             </div>
