@@ -1,54 +1,64 @@
 {
-    "theme_augmentations": {
-        "color": "rgb(75,85,99)",
-        "font": "Nunito",
-        "size": "14px",
-        "background": "white",
-        "shadow": "1px 1px 5px 0 rgba(0, 0, 0, 0.16)"
-    },  
-    "component_names":    
-    [
-        "topBar",
-        "MenuBar",
-        "footer"
-    ],
-    "component_information":  
-    {
-        "topBar": 1,
-        "MenuBar": 
-        {
-            "count": 1,
-            "location": "left of the page, sticky",
-            "description": "A container with sub-menus and avatar",
-            "children":
-            {
-                "Avatar": {
-                    "count": 1,
-                    "location": "top of the MenuBar",
-                    "description": "Avatar Icon with username"
-                },
-                "Menu Items": {
-                    "count": 1,
-                    "location": "Just below Avatar seperated by horizontal line",
-                    "description": "List of menu items containing sub-menu of their own", 
-                    "children":
-                    {
-                        "Menu Details": {
-                            "count": 4,
-                            "location": "Below every list item in menuBar, hidden initially ",
-                            "description": "Sub menu items are accordions that are visible when clicked on menu item in menuBar"
-                        }
-                    }
-                }
-            },
-            "children_orientation_description": "Menu deatils are accordions where all items are in list format"   
+  "theme_augmentations": {
+    "color": "rgb(75,85,99)",
+    "font": "Nunito",
+    "size": "14px",
+    "background": "white",
+    "shadow": "1px 1px 5px 0 rgba(0, 0, 0, 0.16)"
+  },
+  "component_names": ["topBar", "MenuBar", "ComponentsBadges", "footer"],
+  "component_information": {
+    "topBar": 1,
+    "MenuBar": {
+      "count": 1,
+      "location": "left of the page, sticky",
+      "description": "A container with sub-menus and avatar",
+      "children": {
+        "Avatar": {
+          "count": 1,
+          "location": "top of the MenuBar",
+          "description": "Avatar Icon with username"
+        },
+        "Menu Items": {
+          "count": 1,
+          "location": "Just below Avatar seperated by horizontal line",
+          "description": "List of menu items containing sub-menu of their own",
+          "children": {
+            "Menu Details": {
+              "count": 4,
+              "location": "Below every list item in menuBar, hidden initially ",
+              "description": "Sub menu items are accordions that are visible when clicked on menu item in menuBar"
+            }
+          }
         }
-       
+      },
+      "children_orientation_description": "Menu deatils are accordions where all items are in list format"
     },
-    "functionality":
-    {
-        "sidebar_toggle": "a toggle feature that allows the sidebar to be hidden or shown along with resizing to show only icons"
-      
+    "ComponentBadges": {
+      "count": 1,
+      "location": "Main content area of the page",
+      "description": "Component displaying badges with different styles",
+      "children": {
+        "Breadcrumb": {
+          "count": 1,
+          "location": "At the top of the component",
+          "description": "Breadcrumb navigation indicating the current page location"
+        },
+        "BadgeLists": {
+          "count": 2,
+          "location": "Below the breadcrumb",
+          "description": "Lists displaying badges with different styles",
+          "children": {
+            "Badge": {
+              "count": 6,
+              "description": "List of badges with specific style (default or outlined)"
+            }
+          }
+        }
+      }
     }
-
+  },
+  "functionality": {
+    "sidebar_toggle": "a toggle feature that allows the sidebar to be hidden or shown along with resizing to show only icons"
+  }
 }
