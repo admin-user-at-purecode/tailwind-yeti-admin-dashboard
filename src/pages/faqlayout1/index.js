@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 import Footer from "components/footer";
 
@@ -11,8 +11,8 @@ const PagesFAQsLayout1 = () => {
   const [activeIndex2, setActiveIndex2] = useState(3);
 
   return (
-    <main className="workspace">
-      <Breadcrumb title="FAQs">
+    <main className="workspace main">
+      <Breadcrumb title="FAQs" className="BreadcrumbItem">
         <BreadcrumbItem link="#no-link">Pages</BreadcrumbItem>
         <BreadcrumbItem link="#no-link">FAQs</BreadcrumbItem>
         <BreadcrumbItem>Layout 1</BreadcrumbItem>
@@ -20,7 +20,7 @@ const PagesFAQsLayout1 = () => {
 
       <div className="grid lg:grid-cols-4 gap-5">
         <div className="lg:col-span-2 xl:col-span-1">
-          <div className="card p-5">
+          <div className="card p-5 card1">
             <h3>Categories</h3>
             <div className="mt-5 leading-normal">
               <a href="#no-link" className="flex items-center text-normal">
@@ -50,39 +50,40 @@ const PagesFAQsLayout1 = () => {
         </div>
 
         <div className="flex flex-col gap-y-5 lg:col-span-2 xl:col-span-3">
-          {QuestionsData.map((question) => (
-            <div className="card p-5">
+          {QuestionsData.map((question, index) => (
+            <div className="card p-5 card2" key={index}>
               <h3>{question}</h3>
-              <Accordion>
-              {AccordionData.map((data) => {
-                const { title, index } = data;
-                return (
-                  <>
-                    <AccordionItem
-                      activeIndex={
-                        question !== "Fruits" ? activeIndex1 : activeIndex2
-                      }
-                      index={index}
-                      title={title}
-                      onToggle={
-                        question !== "Fruits"
-                          ? setActiveIndex1
-                          : setActiveIndex2
-                      }
-                    >
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Totam iure rem sed dicta ut a perspiciatis temporibus!
-                    </AccordionItem>
-                    {index !== 3 && <hr />}
-                  </>
-                );
-              })}
+              <Accordion className="Accordion">
+                {AccordionData.map((data, index) => {
+                  const { title, i } = data;
+                  return (
+                    <Fragment key={index}>
+                      <AccordionItem
+                        className="AccordionItem"
+                        activeIndex={
+                          question !== "Fruits" ? activeIndex1 : activeIndex2
+                        }
+                        index={i}
+                        title={title}
+                        onToggle={
+                          question !== "Fruits"
+                            ? setActiveIndex1
+                            : setActiveIndex2
+                        }
+                      >
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Totam iure rem sed dicta ut a perspiciatis
+                        temporibus!
+                      </AccordionItem>
+                      {index !== 3 && <hr />}
+                    </Fragment>
+                  );
+                })}
               </Accordion>
             </div>
           ))}
         </div>
       </div>
-
       <Footer />
     </main>
   );
