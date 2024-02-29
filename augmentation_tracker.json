@@ -6,7 +6,7 @@
     "background": "white",
     "shadow": "1px 1px 5px 0 rgba(0, 0, 0, 0.16)"
   },
-  "component_names": ["topBar", "MenuBar", "footer"],
+  "component_names": ["topBar", "MenuBar", "ComponentsTabs", "footer"],
   "component_information": {
     "topBar": 1,
     "MenuBar": {
