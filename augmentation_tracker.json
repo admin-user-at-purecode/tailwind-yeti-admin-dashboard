@@ -13,7 +13,53 @@
     "footer"
   ],
   "component_information": {
-    "topBar": 1,
+    "topBar": {
+      "count": 1,
+      "location": "Fixed on the top of the page",
+      "description": "A flex container placed at the top of the page",
+      "children": {
+        "menuButton": {
+          "count": 1,
+          "location": "Left side of the topBar",
+          "description": "A menu button with a menu icon that toggles the MenuBar when clicked"
+        },
+        "name": {
+          "count": 1,
+          "location": "Right side of the menuButton",
+          "description": "A span element displaying text"
+        },
+        "form": {
+          "count": 1,
+          "location": "Next to the menuButton",
+          "description": "A form containing a search input and a button with an icon, both placed inside a label"
+        },
+        "Tooltip1": {
+          "count": 1,
+          "location": "Next to the form",
+          "description": "A tooltip containing a switch component"
+        },
+        "Tooltip2": {
+          "count": 1,
+          "location": "Next to Tooltip1",
+          "description": "A tooltip containing a button with an icon that toggles fullscreen mode when clicked"
+        },
+        "Dropdown1": {
+          "count": 1,
+          "location": "Next to Tooltip2",
+          "description": "A dropdown menu activated by a button with an icon, showing four icons and text when hovered over"
+        },
+        "Dropdown2": {
+          "count": 1,
+          "location": "Next to Dropdown1",
+          "description": "A dropdown menu activated by a button with an icon, showing a heading, a button, three anchor elements, and text when hovered over"
+        },
+        "Dropdown3": {
+          "count": 1,
+          "location": "Next to Dropdown2",
+          "description": "A dropdown menu activated by a button with an avatar, showing a heading, text, and three anchor elements with icons and text when hovered over"
+        }
+      }
+    },
     "MenuBar": {
       "count": 1,
       "location": "left of the page, sticky",
