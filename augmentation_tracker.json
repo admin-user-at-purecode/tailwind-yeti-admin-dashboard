@@ -1,54 +1,165 @@
 {
-    "theme_augmentations": {
-        "color": "rgb(75,85,99)",
-        "font": "Nunito",
-        "size": "14px",
-        "background": "white",
-        "shadow": "1px 1px 5px 0 rgba(0, 0, 0, 0.16)"
-    },  
-    "component_names":    
-    [
-        "topBar",
-        "MenuBar",
-        "footer"
-    ],
-    "component_information":  
-    {
-        "topBar": 1,
-        "MenuBar": 
-        {
-            "count": 1,
-            "location": "left of the page, sticky",
-            "description": "A container with sub-menus and avatar",
-            "children":
-            {
-                "Avatar": {
-                    "count": 1,
-                    "location": "top of the MenuBar",
-                    "description": "Avatar Icon with username"
-                },
-                "Menu Items": {
-                    "count": 1,
-                    "location": "Just below Avatar seperated by horizontal line",
-                    "description": "List of menu items containing sub-menu of their own", 
-                    "children":
-                    {
-                        "Menu Details": {
-                            "count": 4,
-                            "location": "Below every list item in menuBar, hidden initially ",
-                            "description": "Sub menu items are accordions that are visible when clicked on menu item in menuBar"
-                        }
-                    }
-                }
-            },
-            "children_orientation_description": "Menu deatils are accordions where all items are in list format"   
+  "theme_augmentations": {
+    "color": "rgb(75,85,99)",
+    "font": "Nunito",
+    "size": "14px",
+    "background": "white",
+    "shadow": "1px 1px 5px 0 rgba(0, 0, 0, 0.16)"
+  },
+  "component_names": ["topBar", "MenuBar", "BlogList", "footer"],
+  "component_information": {
+    "topBar": {
+      "count": 1,
+      "location": "Fixed on the top of the page",
+      "description": "A flex container placed at the top of the page",
+      "children": {
+        "menuButton": {
+          "count": 1,
+          "location": "Left side of the topBar",
+          "description": "A menu button with a menu icon that toggles the MenuBar when clicked"
+        },
+        "name": {
+          "count": 1,
+          "location": "Right side of the menuButton",
+          "description": "A span element displaying text"
+        },
+        "form": {
+          "count": 1,
+          "location": "Next to the menuButton",
+          "description": "A form containing a search input and a button with an icon, both placed inside a label"
+        },
+        "Tooltip1": {
+          "count": 1,
+          "location": "Next to the form",
+          "description": "A tooltip containing a switch component"
+        },
+        "Tooltip2": {
+          "count": 1,
+          "location": "Next to Tooltip1",
+          "description": "A tooltip containing a button with an icon that toggles fullscreen mode when clicked"
+        },
+        "Dropdown1": {
+          "count": 1,
+          "location": "Next to Tooltip2",
+          "description": "A dropdown menu activated by a button with an icon, showing four icons and text when hovered over"
+        },
+        "Dropdown2": {
+          "count": 1,
+          "location": "Next to Dropdown1",
+          "description": "A dropdown menu activated by a button with an icon, showing a heading, a button, three anchor elements, and text when hovered over"
+        },
+        "Dropdown3": {
+          "count": 1,
+          "location": "Next to Dropdown2",
+          "description": "A dropdown menu activated by a button with an avatar, showing a heading, text, and three anchor elements with icons and text when hovered over"
         }
-       
+      }
     },
-    "functionality":
-    {
-        "sidebar_toggle": "a toggle feature that allows the sidebar to be hidden or shown along with resizing to show only icons"
-      
+    "MenuBar": {
+      "count": 1,
+      "location": "left of the page, sticky",
+      "description": "A container with sub-menus and avatar",
+      "children": {
+        "Avatar": {
+          "count": 1,
+          "location": "top of the MenuBar",
+          "description": "Avatar Icon with username"
+        },
+        "Menu Items": {
+          "count": 1,
+          "location": "Just below Avatar seperated by horizontal line",
+          "description": "List of menu items containing sub-menu of their own",
+          "children": {
+            "Menu Details": {
+              "count": 4,
+              "location": "Below every list item in menuBar, hidden initially ",
+              "description": "Sub menu items are accordions that are visible when clicked on menu item in menuBar"
+            }
+          }
+        }
+      },
+      "children_orientation_description": "Menu deatils are accordions where all items are in list format"
+    },
+    "BlogList": {
+      "count": 1,
+      "location": "Main content area of the page",
+      "description": "Component displaying a list of blog posts with various UI elements for filtering, sorting, and managing posts",
+      "children": {
+        "Breadcrumb": {
+          "count": 1,
+          "location": "At the top of the component",
+          "description": "Breadcrumb navigation indicating the current page location"
+        },
+        "BlogFilterAndSearch": {
+          "count": 1,
+          "location": "Below the breadcrumb",
+          "description": "Container for filter and search functionalities",
+          "children": {
+            "LayoutButtons": {
+              "count": 1,
+              "description": "Buttons to switch between different layout styles"
+            },
+            "SearchForm": {
+              "count": 1,
+              "description": "Form for searching blog posts",
+              "props": {
+                "placeholder": "Search"
+              }
+            },
+            "SortDropdown": {
+              "count": 1,
+              "description": "Dropdown for sorting blog posts",
+              "props": {
+                "options": ["Ascending", "Descending"]
+              }
+            },
+            "AddNewButton": {
+              "count": 1,
+              "description": "Button to add a new blog post"
+            }
+          }
+        },
+        "BlogPostList": {
+          "count": 1,
+          "location": "Below the filter and search section",
+          "description": "List of blog posts",
+          "props": {
+            "selectedItems": "Array of selected blog post IDs",
+            "onToggleSelection": "Function to toggle selection of a blog post",
+            "currentPageData": "Array of blog post data for the current page",
+            "getBadge": "Function to get the badge based on post status"
+          }
+        },
+        "Pagination": {
+          "count": 1,
+          "location": "Below the blog post list",
+          "description": "Pagination component for navigating through pages of blog posts",
+          "props": {
+            "currentPage": "Current page number",
+            "totalCount": "Total count of blog posts",
+            "pageSize": "Number of blog posts per page",
+            "onPageChange": "Function to handle page change event",
+            "onPageSizeChange": "Function to handle page size change event"
+          }
+        },
+        "FooterBar": {
+          "count": 1,
+          "location": "Below the pagination",
+          "description": "Footer bar for managing selected blog posts",
+          "props": {
+            "selectedItems": "Array of selected blog post IDs",
+            "onRemoveSelected": "Function to handle removal of selected blog posts"
+          }
+        },
+        "Footer": {
+          "count": 1,
+          "location": "At the bottom of the component",
+          "description": "Footer component"
+        }
+      }
     }
-
+  },
+  "functionality": {
+    "sidebar_toggle": "a toggle feature that allows the sidebar to be hidden or shown along with resizing to show only icons"
+  }
 }
