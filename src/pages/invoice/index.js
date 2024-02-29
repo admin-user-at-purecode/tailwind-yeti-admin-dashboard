@@ -5,19 +5,19 @@ import Button from "components/button";
 
 const PagesInvoice = () => {
   return (
-    <main className="workspace">
+    <main className="workspace main">
       <div className="lg:flex items-start">
-        <Breadcrumb title="Invoice">
+        <Breadcrumb title="Invoice" className="Breadcrumb">
           <BreadcrumbItem link="#no-link">Pages</BreadcrumbItem>
           <BreadcrumbItem>Invoice</BreadcrumbItem>
         </Breadcrumb>
 
         <div className="flex flex-wrap gap-2 items-center ltr:ml-auto rtl:mr-auto mb-5">
-          <Button className="uppercase">
+          <Button className="uppercase printButton">
             <span className="la la-print text-xl leading-none ltr:mr-2 rtl:ml-2"></span>
             Print
           </Button>
-          <Button outlined className="uppercase">
+          <Button outlined className="uppercase exportButton">
             <span className="la la-file-alt text-xl leading-none ltr:mr-2 rtl:ml-2"></span>
             Export PDF
           </Button>

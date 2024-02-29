@@ -9,46 +9,150 @@
     "component_names":    
     [
         "topBar",
+        "menuButton",
+        "name",
+        "form",
+        "Tooltip1",
+        "Tooltip2",
+        "Dropdown1",
+        "Dropdown2",
+        "Dropdown3",
         "MenuBar",
-        "footer"
+        "Menu Items",
+        "main",
+        "Breadcrumb",
+        "printButton",
+        "exportButton",
+        "card",
+        "footer",
+        "link1",
+        "link2",
+        "span"
     ],
     "component_information":  
     {
-        "topBar": 1,
-        "MenuBar": 
-        {
+        "topBar": {
+            "count":1,
+            "location":"on the top of the page, fixed on the top",
+            "description":"all components inside the top bar are flexed",
+            "children":{
+                "menuButton":{
+                    "count":1,
+                    "location": "left side inside the topBar",
+                    "description": "menuButton with menu icon, onclick toggles the MenuBar"
+                },
+                "name":{
+                    "count":1,
+                    "location":"right side to the menuButton",
+                    "description":"spam element with text"
+                },
+                "form":{
+                    "count":1,
+                    "location":"beside the menuButton",
+                    "description":"it consists of input type search and button with icon which are placed inside the label"
+                },
+                "Tooltip1": {
+                    "count": 1,
+                    "location": "beside the form",
+                    "description": "it consists of Switch"
+                },
+                "Tooltip2":{
+                    "count":1,
+                    "location":"beside the Tooltip1",
+                    "description":"it consists of a button with icon when button is clicked it toggle into fullscreen"
+                },
+                "Dropdown1":{
+                    "count":1,
+                    "location":"beside the Tooltip2",
+                    "description":"it consists of a button with icon when when hover on button a dropdown menu is shown with four icons and text"
+                },
+                "Dropdown2":{
+                    "count":1,
+                    "location":"beside the Dropdown1",
+                    "description":"it consists of a button with icon when when hover on button a dropdown menu is shown with heading, button and 3 anchor elements and text"
+                },
+                "Dropdown3":{
+                    "count":1,
+                    "location":"beside the Dropdown2",
+                    "description":"it consists of a button with avatar when when hover on button a dropdown menu is shown with heading, text and 3 anchor elements with icon and text"
+                }
+            }
+        },
+        "MenuBar": {
             "count": 1,
-            "location": "left of the page, sticky",
-            "description": "A container with sub-menus and avatar",
+            "location": "left side of the page",
+            "description": "A container with sub-menus",
             "children":
             {
-                "Avatar": {
-                    "count": 1,
-                    "location": "top of the MenuBar",
-                    "description": "Avatar Icon with username"
-                },
                 "Menu Items": {
-                    "count": 1,
-                    "location": "Just below Avatar seperated by horizontal line",
-                    "description": "List of menu items containing sub-menu of their own", 
-                    "children":
-                    {
-                        "Menu Details": {
-                            "count": 4,
-                            "location": "Below every list item in menuBar, hidden initially ",
-                            "description": "Sub menu items are accordions that are visible when clicked on menu item in menuBar"
-                        }
-                    }
+                    "count": 7,
+                    "location": "left side of page and all Menu Items align vertically in MenuBar",
+                    "description": "List of menu items containing sub-menu of their own"
                 }
             },
             "children_orientation_description": "Menu deatils are accordions where all items are in list format"   
+        },
+        "main": {
+            "count":1,
+            "location":"below the topBar and beside the MenuBar",
+            "description":"all components are align in vertical",
+            "children":{
+                "Breadcrumb":{
+                    "count":1,
+                    "location":"top of the main",
+                    "description":"it consists of 3 breadcrumb items"
+                },
+                "exportButton":{
+                    "count":1,
+                    "location":"on the right side of the page and aligned horizontal with Breadcrumb",
+                    "description":"it consists of icon and text"
+                },
+                "printButton":{
+                    "count":1,
+                    "location":"left side of the exportButton",
+                    "description":"it consists of icon and text"
+                },
+                "card":{
+                    "count":1,
+                    "location":"below the Breadcrumb",
+                    "description":"it consists of sub-headings,text,tables",
+                    "children":{
+                        "table":{
+                            "count":1,
+                            "location":"inside the card",
+                            "description":"it consists of table header, table body. In table body consists of four rows"
+                        }
+                    }
+                }
+            }
+        },
+        "footer":{
+            "count":1,
+            "location":"below the main",
+            "description":"all components inside the top bar are flexed",
+            "children":{
+                "link1":{
+                    "count":1,
+                    "location":"at the end of footer",
+                    "description":"it consist text with nav link"
+                },
+                "link2":{
+                    "count":1,
+                    "location":"beside the link1",
+                    "description":"it consist text with nav link"
+                },
+                "span":{
+                    "count":1,
+                    "location":"at starting of footer",
+                    "description":"it consist text"
+                }
+            }
         }
        
     },
     "functionality":
     {
         "sidebar_toggle": "a toggle feature that allows the sidebar to be hidden or shown along with resizing to show only icons"
-      
     }
 
 }
