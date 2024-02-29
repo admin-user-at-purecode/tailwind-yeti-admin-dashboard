@@ -31,7 +31,7 @@ const TopBar = () => {
       <span className="brand">Yeti</span>
 
       {/* Search */}
-      <form className="hidden md:block ltr:ml-10 rtl:mr-10">
+      <form className="hidden md:block ltr:ml-10 rtl:mr-10 form">
         <label className="form-control-addon-within rounded-full">
           <input className="form-control border-none" placeholder="Search" />
           <button className="text-gray-300 dark:text-gray-700 text-xl leading-none la la-search ltr:mr-4 rtl:ml-4"></button>
@@ -41,7 +41,7 @@ const TopBar = () => {
       {/* Right */}
       <div className="flex items-center ltr:ml-auto rtl:mr-auto">
         {/* Dark Mode */}
-        <Tooltip content="Toggle Dark Mode">
+        <Tooltip content="Toggle Dark Mode Tooltip1">
           <Switch
             outlined
             // checked={false}
@@ -50,7 +50,7 @@ const TopBar = () => {
         </Tooltip>
 
         {/* Fullscreen */}
-        <Tooltip content="Fullscreen">
+        <Tooltip content="Fullscreen Tooltip2">
           <button
             className={classNames(
               "hidden lg:inline-block ltr:ml-3 rtl:mr-3 px-2 text-2xl leading-none la",
@@ -66,6 +66,7 @@ const TopBar = () => {
         {/* Apps */}
         <div className="self-stretch">
           <Dropdown
+            className="Dropdown1"
             arrow={true}
             placement="bottom"
             content={
@@ -112,6 +113,7 @@ const TopBar = () => {
         {/* Notifications */}
         <div className="self-stretch">
           <Dropdown
+            className="Dropdown2"
             arrow={true}
             content={
               <div>
@@ -159,6 +161,7 @@ const TopBar = () => {
         {/* User Menu */}
         <div>
           <Dropdown
+            className="Dropdown3"
             arrow={true}
             content={
               <div className="w-64">
