@@ -1,43 +1,87 @@
 {
-    "theme_augmentations": {
-        "color": "rgb(75,85,99)",
-        "font": "Nunito",
-        "size": "14px",
-        "background": "white",
-        "shadow": "1px 1px 5px 0 rgba(0, 0, 0, 0.16)"
-    },  
-    "component_names":    
-    [
-        "topBar",
-        "MenuBar",
-        "footer"
-    ],
-    "component_information":  
-    {
-        "topBar": 1,
-        "MenuBar": 
-        {
-            "count": 1,
-            "location": "left of the page, sticky",
-            "description": "A container with sub-menus and avatar",
-            "children":
-            {
-                "Avatar": {
-                    "count": 1,
-                    "location": "top of the MenuBar",
-                    "description": "Avatar Icon with username"
-                }
-               
-            },
-            "children_orientation_description": "Menu deatils are accordions where all items are in list format"   
+  "theme_augmentations": {
+    "color": "rgb(75,85,99)",
+    "font": "Nunito",
+    "size": "14px",
+    "background": "white",
+    "shadow": "1px 1px 5px 0 rgba(0, 0, 0, 0.16)"
+  },
+  "component_names": ["topBar", "MenuBar", "component", "footer"],
+  "component_information": {
+    "topBar": 1,
+    "MenuBar": {
+      "count": 1,
+      "location": "left of the page, sticky",
+      "description": "A container with sub-menus and avatar",
+      "children": {
+        "Avatar": {
+          "count": 1,
+          "location": "top of the MenuBar",
+          "description": "Avatar Icon with username"
         }
-       
+      },
+      "children_orientation_description": "Menu deatils are accordions where all items are in list format"
     },
-    "functionality":
-    {
-        "sidebar_toggle": "a toggle feature that allows the sidebar to be hidden or shown along with resizing to show only icons",
-        "search_&_select": "A functionality that combines search and selection features, allowing users to search for specific items within a list or dropdown and select the desired option. It may include features like filtering options based on search queries, autocomplete suggestions, and dynamic updating of results based on user input."
-
+    "component": {
+      "count": 1,
+      "location": "Main body of the page , below topbar",
+      "description": "component containing various UI elements",
+      "children": {
+        "Breadcrumbs": {
+          "count": 1,
+          "location": "top of  the component",
+          "description": "shows path of the page"
+        },
+        "inputCard": {
+          "count": 1,
+          "location": "below the breadcrumb",
+          "description": "Input element with label and input heading"
+        },
+        "SelectSearch": {
+          "count": 1,
+          "location": "below the rating card",
+          "description": "Select input field with search functionality"
+        },
+        "customSelect": {
+          "count": 1,
+          "location": "Below the InputCard",
+          "description": "Select input with custom stylings"
+        },
+        "customInput": {
+          "count": 1,
+          "location": "right to the inputCard",
+          "description": "container with customized chechbox and radio"
+        },
+        "RangeSlider": {
+          "count": 1,
+          "location": "beside customInput, top-right of parent container",
+          "description": "Range slider input allowing users to select a range of values by dragging a slider thumb along a track"
+        },
+        "Rating": {
+          "count": 1,
+          "location": "below the RangeSlider",
+          "description": "Rating component allowing users to provide feedback by selecting a number of stars or a numerical value"
+        },
+        "Switch": {
+          "count": 1,
+          "location": "Below the CustomInput within the component",
+          "description": "Switch component allowing users to toggle between two states"
+        },
+        "Textarea": {
+          "count": 1,
+          "location": "Below the CustomSelect within the component",
+          "description": "Textarea input allowing users to input and edit multiline text"
+        },
+        "FileInput": {
+          "count": 1,
+          "location": "Below the Textarea within the component",
+          "description": "File input element allowing users to select and upload files from their device"
+        }
+      }
     }
-
+  },
+  "functionality": {
+    "sidebar_toggle": "a toggle feature that allows the sidebar to be hidden or shown along with resizing to show only icons",
+    "search_&_select": "A functionality that combines search and selection features, allowing users to search for specific items within a list or dropdown and select the desired option. It may include features like filtering options based on search queries, autocomplete suggestions, and dynamic updating of results based on user input."
+  }
 }

@@ -27,7 +27,7 @@ const FormComponents = () => {
       <div className="grid lg:grid-cols-3 gap-5">
         <div className="flex flex-col gap-y-5">
           {/* Input */}
-          <div className="card p-5">
+          <div className="card p-5 inputCard">
             <h3>Input</h3>
             <div className="mt-5">
               <Label className="block mb-2" htmlFor="input">
