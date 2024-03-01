@@ -16,15 +16,14 @@ const AuthRegister = () => {
 
   return (
     <>
-      <section className="top-bar">
+      <section className="top-bar topBar">
         <span className="brand">Yeti</span>
-
         <nav className="flex items-center ltr:ml-auto rtl:mr-auto">
-          <Tooltip content="Toggle Dark Mode">
+          <Tooltip content="Toggle Dark Mode" className="Tooltip1">
             <Switch outlined />
           </Tooltip>
 
-          <Tooltip content="Fullscreen">
+          <Tooltip content="Fullscreen" className="Tooltip2">
             <button
               className={classNames(
                 "hidden lg:inline-block ltr:ml-3 rtl:mr-3 px-2 text-2xl leading-none la",
@@ -39,7 +38,7 @@ const AuthRegister = () => {
 
           <a
             href="/auth-login"
-            className="btn btn_primary uppercase ltr:ml-5 rtl:mr-5"
+            className="btn btn_primary uppercase ltr:ml-5 rtl:mr-5 anchorElement"
           >
             Login
           </a>
@@ -52,21 +51,20 @@ const AuthRegister = () => {
             <h2 className="uppercase">Create Your Account</h2>
             <h4 className="uppercase">Let's Roll</h4>
           </div>
-          <form className="card mt-5 p-5 md:p-10">
-            {['Name', 'Email'].map((value) => (
-              <div className="mb-5">
-              <Label className="block mb-2" htmlFor="name">
+          <form className="card mt-5 p-5 md:p-10 form">
+            {['Name', 'Email'].map((value,index) => (
+              <div className="mb-5" key={index}>
+              <Label className="block mb-2" htmlFor={value}>
                 {value}
               </Label>
-              <Input id="name" placeholder="John Doe" />
+              <Input id={value} placeholder="John Doe"/>
             </div>
             ))}
-          
             <div className="mb-5">
-              <Label className="block mb-2" htmlFor="password">
+              <Label className="block mb-2 label" htmlFor="password">
                 Password
               </Label>
-              <label className="form-control-addon-within">
+              <label className="form-control-addon-within inputContainer">
                 <Input
                   id="password"
                   type={isPasswordVisible ? "text" : "password"}
@@ -83,7 +81,7 @@ const AuthRegister = () => {
               </label>
             </div>
             <div className="flex">
-              <Button className="ltr:ml-auto rtl:mr-auto uppercase">
+              <Button className="ltr:ml-auto rtl:mr-auto uppercase button">
                 Register
               </Button>
             </div>
