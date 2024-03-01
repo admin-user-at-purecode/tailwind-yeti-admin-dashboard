@@ -1,54 +1,175 @@
 {
-    "theme_augmentations": {
-        "color": "rgb(75,85,99)",
-        "font": "Nunito",
-        "size": "14px",
-        "background": "white",
-        "shadow": "1px 1px 5px 0 rgba(0, 0, 0, 0.16)"
-    },  
-    "component_names":    
-    [
-        "topBar",
-        "MenuBar",
-        "footer"
-    ],
-    "component_information":  
-    {
-        "topBar": 1,
-        "MenuBar": 
-        {
-            "count": 1,
-            "location": "left of the page, sticky",
-            "description": "A container with sub-menus and avatar",
-            "children":
-            {
-                "Avatar": {
-                    "count": 1,
-                    "location": "top of the MenuBar",
-                    "description": "Avatar Icon with username"
-                },
-                "Menu Items": {
-                    "count": 1,
-                    "location": "Just below Avatar seperated by horizontal line",
-                    "description": "List of menu items containing sub-menu of their own", 
-                    "children":
-                    {
-                        "Menu Details": {
-                            "count": 4,
-                            "location": "Below every list item in menuBar, hidden initially ",
-                            "description": "Sub menu items are accordions that are visible when clicked on menu item in menuBar"
-                        }
-                    }
-                }
-            },
-            "children_orientation_description": "Menu deatils are accordions where all items are in list format"   
+  "theme_augmentations": {
+    "color": "rgb(75,85,99)",
+    "font": "Nunito",
+    "size": "14px",
+    "background": "white",
+    "shadow": "1px 1px 5px 0 rgba(0, 0, 0, 0.16)"
+  },
+  "component_names": ["topBar", "MenuBar", "footer"],
+  "component_information": {
+    "topBar": {
+      "count": 1,
+      "location": "Fixed on the top of the page",
+      "description": "A flex container placed at the top of the page",
+      "children": {
+        "menuButton": {
+          "count": 1,
+          "location": "Left side of the topBar",
+          "description": "A menu button with a menu icon that toggles the MenuBar when clicked"
+        },
+        "name": {
+          "count": 1,
+          "location": "Right side of the menuButton",
+          "description": "A span element displaying text"
+        },
+        "form": {
+          "count": 1,
+          "location": "Next to the menuButton",
+          "description": "A form containing a search input and a button with an icon, both placed inside a label"
+        },
+        "Tooltip1": {
+          "count": 1,
+          "location": "Next to the form",
+          "description": "A tooltip containing a switch component"
+        },
+        "Tooltip2": {
+          "count": 1,
+          "location": "Next to Tooltip1",
+          "description": "A tooltip containing a button with an icon that toggles fullscreen mode when clicked"
+        },
+        "Dropdown1": {
+          "count": 1,
+          "location": "Next to Tooltip2",
+          "description": "A dropdown menu activated by a button with an icon, showing four icons and text when hovered over"
+        },
+        "Dropdown2": {
+          "count": 1,
+          "location": "Next to Dropdown1",
+          "description": "A dropdown menu activated by a button with an icon, showing a heading, a button, three anchor elements, and text when hovered over"
+        },
+        "Dropdown3": {
+          "count": 1,
+          "location": "Next to Dropdown2",
+          "description": "A dropdown menu activated by a button with an avatar, showing a heading, text, and three anchor elements with icons and text when hovered over"
         }
-       
+      }
     },
-    "functionality":
-    {
-        "sidebar_toggle": "a toggle feature that allows the sidebar to be hidden or shown along with resizing to show only icons"
-      
+    "MenuBar": {
+      "count": 1,
+      "location": "left of the page, sticky",
+      "description": "A container with sub-menus and avatar",
+      "children": {
+        "Avatar": {
+          "count": 1,
+          "location": "top of the MenuBar",
+          "description": "Avatar Icon with username"
+        },
+        "Menu Items": {
+          "count": 1,
+          "location": "Just below Avatar seperated by horizontal line",
+          "description": "List of menu items containing sub-menu of their own",
+          "children": {
+            "Menu Details": {
+              "count": 4,
+              "location": "Below every list item in menuBar, hidden initially ",
+              "description": "Sub menu items are accordions that are visible when clicked on menu item in menuBar"
+            }
+          }
+        }
+      },
+      "children_orientation_description": "Menu deatils are accordions where all items are in list format"
+    },
+    "Component": {
+      "count": 1,
+      "location": "Main content area of the page",
+      "description": "Component for adding a new blog post with form inputs, category selection, tag input, and featured image upload",
+      "children": {
+        "Breadcrumb": {
+          "count": 1,
+          "location": "At the top of the component",
+          "description": "Breadcrumb navigation indicating the current page location"
+        },
+        "ContentSection": {
+          "count": 1,
+          "location": "Below the breadcrumb",
+          "description": "Section for entering blog post content",
+          "children": {
+            "InputField": {
+              "count": 3,
+              "description": "Input fields for title, slug, and excerpt",
+              "props": {
+                "id": "title",
+                "placeholder": "Enter title"
+              }
+            },
+            "Textarea": {
+              "count": 2,
+              "description": "Textarea fields for blog post content and excerpt"
+            }
+          }
+        },
+        "PublishSection": {
+          "count": 1,
+          "location": "On the right side",
+          "description": "Section for configuring publish options",
+          "children": {
+            "CustomSelect": {
+              "count": 2,
+              "description": "Dropdowns for selecting status and visibility",
+              "options": ["Draft", "Public"]
+            },
+            "Switch": {
+              "count": 1,
+              "description": "Switch for toggling immediate publishing"
+            },
+            "Button": {
+              "count": 2,
+              "description": "Buttons for publishing and saving draft"
+            }
+          }
+        },
+        "CategoriesSection": {
+          "count": 1,
+          "location": "Below the content section",
+          "description": "Section for selecting categories",
+          "children": {
+            "Tabs": {
+              "count": 1,
+              "description": "Tabs for switching between most used and all categories",
+              "props": {
+                "activeIndex": 1
+              }
+            },
+            "Checkbox": {
+              "count": 5,
+              "description": "Checkboxes for selecting categories"
+            }
+          }
+        },
+        "TagsSection": {
+          "count": 1,
+          "location": "Below the categories section",
+          "description": "Section for entering tags",
+          "children": {
+            "Input": {
+              "count": 1,
+              "description": "Input field for entering tags"
+            },
+            "Badge": {
+              "count": 1,
+              "description": "Badge for displaying entered tags"
+            },
+            "Button": {
+              "count": 1,
+              "description": "Button for browsing featured image"
+            }
+          }
+        }
+      }
     }
-
+  },
+  "functionality": {
+    "sidebar_toggle": "a toggle feature that allows the sidebar to be hidden or shown along with resizing to show only icons"
+  }
 }
